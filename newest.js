@@ -1,17 +1,33 @@
 $.ajax({
-  url: 'https://raw.githubusercontent.com/Bdb253/HRJsonProject/master/DeptData.json',
+  url: 'https://raw.githubusercontent.com/GabeSaint/TestField/master/tuitionsample.json',
   dataType: 'json',
 
   success: function(data) {
     //iterate over the data and append a selet option
     $.each(data, function(key, val) {
-      var option = $('<option id="' + val.DeptID + '">' + val.DeptDescr + '</option>');
-      $('#DeptSelect').append(option);
+      var option1 = $('<option id="' + val.YearVal + '">' + val.Year + '</option>'); // This will write html as follows ***<option id="DeptID">DeptDescr</option>***
+      $('#Year').append(option1);
+    }),
+    $.each(data, function(key, val) {
+      var option2 = $('<option id="' + val.StudentStatVal + '">' + val.StudentStat + '</option>');
+      $('#StudentStat').append(option2);
+    }),
+    $.each(data, function(key, val) {
+      var option3 = $('<option id="' + val.LocationVal + '">' + val.Location + '</option>');
+      $('#Location').append(option3);
+    }),
+    $.each(data, function(key, val) {
+      var option4 = $('<option id="' + val.ResidencyVal + '">' + val.Residency + '</option>');
+      $('#ResidencyStat').append(option4);
+    }),
+    $.each(data, function(key, val) {
+      var option5 = $('<option id="' + val.AcademicVal + '">' + val.Academic + '</option>');
+      $('#Academic').append(option5);
     })
   },
   error: function() {
     //if there is an error append a 'none avaliable' option
-    $('#DeptSelect').append('<option id="-1">NONE AVAILABLE</option>');
+    $('#Year').append('<option id="-1">NONE AVAILABLE</option>');
   }
 })
 
@@ -20,139 +36,64 @@ function showInfo()
   {
     //clear previous results
     $('#result1').html('');
-    $('#result2').html('');
-    $('#result3').html('');
-    $('#result4').html('');
+
 
     //get the id of the select
-    var id = $('#DeptSelect').val()
+    var Yearid = $('#Year').find('option:selected').attr('id');
+    var StudentStatid = $('#StudentStat').find('option:selected').attr('id');
+    var Locationid = $('#Location').find('option:selected').attr('id');
+    var ResidencyStatid = $('#ResidencyStat').find('option:selected').attr('id');
+    var Academicid = $('#Academic').find('option:selected').attr('id');
+
+    // Create the ID
+
+    var Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid + '-' + Academicid
+
+    document.getElementById("testValue").innerHTML = Totalid;
 
     //display all the relevant data for the department
-    employeeRelations(id);
-    compensation(id)
-    employment(id);
-    employeePay(id);
+    tuitionTable(Totalid);
   }
 
-  function employeeRelations(id)
+  function tuitionTable(Totalid)
   {
-    //display section header
-    $('#result1').append("<h2>Employment Relations</h2>"+
-    '<ul><li>Problem solving for employees and managers on Human Resource issues</li>'+
-    '<li>Organizational effectiveness</li>'+
-    '<li>Performance appraisals and performance concerns</li>'+
-    '<li>Disciplinary actions</li>'+
-    '<li>NAU Human Resources and ABOR personnel policy interpretation</li>'+
-    '<li>Compliance with federal and state law</li></ul>');
 
-    $.getJSON('https://raw.githubusercontent.com/Bdb253/HRJsonProject/master/DeptData.json', function(data)
+
+    //display section header
+    $('#result1').append("<div></div>");
+
+    $.getJSON('https://raw.githubusercontent.com/GabeSaint/TestField/master/tuitionsample.json', function(data)
     {
       $.each(data, function(key, val)
       {
         //dispaly the correct people based off drop down
-        if(id == val.DeptDescr)
+        if(Totalid == val["TuitionIdentifier"]) // if(id == val.DeptDescr)
         {
-          var person1 = '<p>' + val["Employee Relations1"] + '<br>' +'title'+ '<br>' + 'email' + '<br>' + 'phone' + '</p>';
-          var person2 = '<p>' + val["Employee Relations2"] + '<br>' +'title'+ '<br>' + 'email' + '<br>' + 'phone' + '</p>';
-          $('#result1').append(person1 + '<br>' + person2);
+          '<h2>Tuition Fees</h2>'
+          var tableResult = '<table><tr><th>Tuition</th><th>FA Trust</th><th>Health/Rec</th><th>Activity</th><th>Info Tech</th><th>Green</th><th>ASNAU</th><th>Athletics</th><th>Fee Total</th><th>Grand Total</th></tr><tr><td>' +
+          val["Tuition"] +
+          '</td><td>' +
+          val["FA Trust"] +
+          '</td><td>' +
+          val["Health/Rec"] +
+          '</td><td>' +
+          val["Activity"] +
+          '</td><td>' +
+          val["Info Tech"] +
+          '</td><td>' +
+          val["Green"] +
+          '</td><td>' +
+          val["ASNAU"] +
+          '</td><td>' +
+          val["Athletics"] +
+          '</td><td>' +
+          val["Fee Total"] +
+          '</td><td>' +
+          val["Grand total"] +
+          '</td></tr></table>';
+          $('#result1').append(tableResult);
         }
       });
 
-    });
-  }
-
-  function compensation(id)
-  {
-    //display section header
-    $('#result2').append("<h2>Compensation</h2>" +
-    '<ul><li>Special assignments</li>'+
-    '<li>Workforce planning and salary adjustments</li>'+
-    '<li>Classified staff pay grades and salary ranges</li>'+
-    '<li>Job classification titles and descriptions</li>'+
-    '<li>Service professional compensation guidelines</li></ul>');
-
-    $.getJSON('https://raw.githubusercontent.com/Bdb253/HRJsonProject/master/DeptData.json', function(data)
-    {
-      $.each(data, function(key, val)
-      {
-        //dispaly the correct people based off drop down
-        if(id == val.DeptDescr)
-        {
-          var person1 = '<p>' + val.Compensation1 + '<br>' +'title'+ '<br>' + 'email' + '<br>' + 'phone' + '</p>';
-          var person2 = '<p>' + val.Compensation2 + '<br>' +'title'+ '<br>' + 'email' + '<br>' + 'phone' + '</p>';
-          $('#result2').append(person1 + '<br>' + person2);
-        }
-      })
-    });
-  }
-
-  function employment(id)
-  {
-    //display section header
-    $('#result3').append("<h2>Employment</h2>" +
-    '<p>Hiring process for staff' +
-    '<ul><li>Classified Staff (Hire Smart)</li>'+
-    '<li>Service Professional (Hire Smart)</li>'+
-    '<li>Temporary Employees</li>'+
-    '<li>Student Workers</li></ul>' +
-    'Jop Requisiton Analysis' +
-    '<ul><li>Establishing Titles</li>' +
-    '<li>Establishing posting ranges</li></ul>' +
-    'Job Postings'+
-    '<ul><li>Posting on HR Website</li>' +
-    '<li>Closing a posting</li></ul>' +
-    'New Employee Hiring/Onboarding' +
-    'Background and Fingerprint Checking</p>');
-
-    $.getJSON('https://raw.githubusercontent.com/Bdb253/HRJsonProject/master/DeptData.json', function(data)
-    {
-      $.each(data, function(key, val)
-      {
-        //dispaly the correct people based off drop down
-        if(id == val.DeptDescr)
-        {
-          var person1 = '<p>' + val.Employment1 + '<br>' +'title'+ '<br>' + 'email' + '<br>' + 'phone' + '</p>';
-          var person2 = '<p>' + val.Employment3 + '<br>' +'title'+ '<br>' + 'email' + '<br>' + 'phone' + '</p>';
-          $('#result3').append(person1 + '<br>' + person2);
-        }
-      });
-    });
-
-  }
-
-  function employeePay(id)
-  {
-    //display section header
-    $('#result4').append("<h2>Employee Pay Services</h2>" +
-    '<p>Employee Pay Questions' +
-    '<ul><li>Benefit eligible employees</li>'+
-    '<li>Benefit eligible employees</li>'+
-    '<li>Federal Work Study</li>'+
-    '<li>Federal Work Study</li>'+
-    '<li>Extended Campuses part-time instructors</li></ul>' +
-    'ePAR Processing' +
-    '<ul><li>Initiating ePARS</li>' +
-    '<li>ePAR approval issues</li></ul>' +
-    'End of employment pay issues'+
-    '<ul><li>vacation payouts</li>' +
-    '<li>final pay calculations</li></ul>' +
-    'Online Time Processing' +
-    'Employee pay discrepancies'+
-    'New Employee Hiring Packet Processing (Hire Xpress)' +
-    'Off Cycle Check Processing</p>');
-
-    $.getJSON('https://raw.githubusercontent.com/Bdb253/HRJsonProject/master/DeptData.json',
-    function(data)
-    {
-      $.each(data, function(key, val)
-      {
-        //dispaly the correct people based off drop down
-        if(id == val.DeptDescr)
-        {
-          var person1 = '<p>' + val["Employee Pay Services1"] + '<br>' + 'title'+ '<br>' + 'email' + '<br>' + 'phone' + '</p>';
-          var person2 = '<p>' + val["Employee Pay Services2"] + '<br>' + 'title'+ '<br>' + 'email' + '<br>' + 'phone' + '</p>';
-          $('#result4').append(person1 + '<br>' + person2);
-        }
-      });
     });
   }
