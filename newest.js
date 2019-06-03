@@ -48,8 +48,7 @@ function showInfo()
     // Create the ID
 
     var Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid + '-' + Academicid
-
-    document.getElementById("testValue").innerHTML = Totalid;
+    document.getElementById("testValue").innerHTML = Totalid; // Test line above
 
     //display all the relevant data for the department
     tuitionTable(Totalid);
@@ -57,11 +56,8 @@ function showInfo()
 
   function tuitionTable(Totalid)
   {
-
-
     //display section header
     $('#result1').append("<div></div>");
-
 
 
     $.getJSON('https://raw.githubusercontent.com/GabeSaint/TestField/master/tuitionsample.json', function(data)
@@ -97,17 +93,12 @@ function showInfo()
           val["Fee Total"] +
           '</td></tr></table>';
           $('#result1').append(tableResult);
-          $(".FTH").css({"background-color":"#FFD200", "font-size":"16px", "border-spacing":"0px" , "border":"0px solid #cccccc" });
-          $("table").css({"border-spacing":"0px" , "border":"0px solid #cccccc" });
-          $("td").css({"border-spacing":"0px" , "border":"1px solid #cccccc" });
-
-
-
-
+          $(".FTH").css({"background-color":"#FFD200", "font-size":"16px", "border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center" });
+          $("table").css({"border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center" });
+          $("td").css({"border-spacing":"0px" , "border":"1px solid #cccccc", "text-align":"center" });
 
         }
       });
 
     });
   }
-
