@@ -93,9 +93,9 @@ function showInfo()
           val["Fee Total"] +
           '</td></tr></table>';
           $('#result1').append(tableResult);
-          $(".FTH").css({"background-color":"#FFD200", "font-size":"16px", "border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center", "text-weight":"bold" });
-          $("table").css({"border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center", "text-weight":"bold" });
-          $("td").css({"border-spacing":"0px" , "border":"1px solid #cccccc", "text-align":"center", "text-weight":"bold" });
+          $(".FTH").css({"background-color":"#FFD200", "font-size":"16px", "border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center", "font-weight":"bold" });
+          $("table").css({"border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center" });
+          $("td").css({"border-spacing":"0px" , "border":"1px solid #cccccc", "text-align":"center"});
 
         }
       });
