@@ -70,9 +70,14 @@ function showInfo()
         if(Totalid == val["TuitionIdentifier"]) // if(id == val.DeptDescr)
         {
           '<h2>Tuition Fees</h2>'
-          var tableResult = '<table><tr><th>Tuition</th><th>FA Trust</th><th>Health/Rec</th><th>Activity</th><th>Info Tech</th><th>Green</th><th>ASNAU</th><th>Athletics</th><th>Fee Total</th><th>Grand Total</th></tr><tr><td>' +
+          var tableResult = '<table><tr><th>Tuition</th><th>Fees</th><th>Total</th><tr><td>' +
           val["Tuition"] +
           '</td><td>' +
+          val["Fee Total"] +
+          '</td><td>' +
+          val["Grand total"] +
+          '</td></tr></table>' +
+          '<table><tr><th>FA Trust</th><th>Health/Rec</th><th>Activity</th><th>Info Tech</th><th>Green</th><th>ASNAU</th><th>Athletics</th><th>Fee Total</th></tr><tr><td>' +
           val["FA Trust"] +
           '</td><td>' +
           val["Health/Rec"] +
@@ -88,8 +93,6 @@ function showInfo()
           val["Athletics"] +
           '</td><td>' +
           val["Fee Total"] +
-          '</td><td>' +
-          val["Grand total"] +
           '</td></tr></table>';
           $('#result1').append(tableResult);
         }
