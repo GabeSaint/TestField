@@ -62,6 +62,8 @@ function showInfo()
     //display section header
     $('#result1').append("<div></div>");
 
+
+
     $.getJSON('https://raw.githubusercontent.com/GabeSaint/TestField/master/tuitionsample.json', function(data)
     {
       $.each(data, function(key, val)
@@ -70,14 +72,14 @@ function showInfo()
         if(Totalid == val["TuitionIdentifier"]) // if(id == val.DeptDescr)
         {
           '<h2>Tuition Fees</h2>'
-          var tableResult = '<table><tr><th>Tuition</th><th>Fees</th><th>Total</th><tr><td>' +
+          var tableResult = '<table><tr><th class="FTH">Tuition</th><th class="FTH">Fees</th><th class="FTH"">Total</th><tr><td>' +
           val["Tuition"] +
           '</td><td>' +
           val["Fee Total"] +
           '</td><td>' +
           val["Grand total"] +
-          '</td></tr></table>' +
-          '<table><tr><th>FA Trust</th><th>Health/Rec</th><th>Activity</th><th>Info Tech</th><th>Green</th><th>ASNAU</th><th>Athletics</th><th>Fee Total</th></tr><tr><td>' +
+          '</td></tr></table>&nbsp;<br>&nbsp;' +
+          '<table><tr><th class="FTH">FA<br>Trust</th><th class="FTH">Health<br>&amp; Rec</th><th class="FTH">Activity</th><th class="FTH">Info<br>Tech</th><th class="FTH">Green</th><th class="FTH">ASNAU</th><th class="FTH">Athletics</th><th class="FTH">Fee<br>Total</th></tr><tr><td>' +
           val["FA Trust"] +
           '</td><td>' +
           val["Health/Rec"] +
@@ -95,8 +97,17 @@ function showInfo()
           val["Fee Total"] +
           '</td></tr></table>';
           $('#result1').append(tableResult);
+          $(".FTH").css({"background-color":"#FFD200", "font-size":"16px", "border-spacing":"0px" , "border":"0px solid #cccccc" });
+          $("table").css({"border-spacing":"0px" , "border":"0px solid #cccccc" });
+          $("td").css({"border-spacing":"0px" , "border":"1px solid #cccccc" });
+
+
+
+
+
         }
       });
 
     });
   }
+
