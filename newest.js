@@ -96,7 +96,7 @@ function showInfo()
         else if (Totalid == val["TuitionIdentifier"] && Honorsid === true) {
 
           var tableResult = '<h2>Tuition Fees</h2>'+
-          '<table><tr><th class="FTH">TuitionZ</th><th class="FTH">TuitionZ</th><th class="FTH">Fees</th><th class="FTH"">Total</th><tr><td>' +
+          '<table><tr><th class="FTH">Tuition</th><th class="FTH">TuitionZ</th><th class="FTH">Fees</th><th class="FTH"">Total</th><tr><td>' +
           val["Tuition"] +
           '</td><td>' +
           val["Tuition"] +
