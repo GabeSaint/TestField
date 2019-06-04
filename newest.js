@@ -32,6 +32,8 @@ $.ajax({
 })
 
 
+
+
 function showInfo()
   {
     //clear previous results
@@ -67,8 +69,9 @@ function showInfo()
         //dispaly the correct people based off drop down
         if(Totalid == val["TuitionIdentifier"]) // if(id == val.DeptDescr)
         {
-          '<h2>Tuition Fees</h2>'
-          var tableResult = '<table><tr><th class="FTH">Tuition</th><th class="FTH">Fees</th><th class="FTH"">Total</th><tr><td>' +
+
+          var tableResult = '<h2>Tuition Fees</h2>'+
+          '<table><tr><th class="FTH">Tuition</th><th class="FTH">Fees</th><th class="FTH"">Total</th><tr><td>' +
           val["Tuition"] +
           '</td><td>' +
           val["Fee Total"] +
