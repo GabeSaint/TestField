@@ -42,7 +42,7 @@ function showInfo()
 
     // Create the ID
     var Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid + '-' + Academicid
-    document.getElementById("testValue").innerHTML = Totalid + '-' + Honorsid; // Test line above
+    //document.getElementById("testValue").innerHTML = Totalid + '-' + Honorsid; // Test line above
 
     // Call Function - Display Table
     tuitionTable(Totalid, Honorsid);
