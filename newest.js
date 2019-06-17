@@ -1,3 +1,4 @@
+
   window.onload=function(){
     document.getElementById("buttonFee").style.display='none';
 }
@@ -11,7 +12,12 @@ $.ajax({
   success: function(data) {
     $.each(data, function(key, val) {
       var option1 = $('<option id="' + val.YearVal + '">' + val.Year + '</option>');
+      if (val.Year == ""){
+        // Do nothing
+      } else {
       $('#Year').append(option1);
+    }
+
       var option2 = $('<option id="' + val.StudentStatVal + '">' + val.StudentStat + '</option>');
       if (val.StudentStat == ""){
         // Do nothing
@@ -19,7 +25,12 @@ $.ajax({
       $('#StudentStat').append(option2);
     }
       var option3 = $('<option id="' + val.LocationVal + '">' + val.Location + '</option>');
-      $('#Location').append(option3);
+      if (val.Location == ""){
+        // Do nothing
+      } else {
+        $('#Location').append(option3);
+    }
+
       var option4 = $('<option id="' + val.ResidencyVal + '">' + val.Residency + '</option>');
       if (val.Residency == ""){
         // Do nothing
@@ -63,8 +74,14 @@ function showInfo()
     var Honorsid= $('input[type=checkbox]').prop('checked');
 
     // Create the ID
-    var Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid// + '-' + Academicid
-    //document.getElementById("testValue").innerHTML = Totalid + '-' + Honorsid; // Test line above
+
+    if (Locationid == "ONLINE" ){
+    var Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-ONLINE';
+    document.getElementById("ResidencyStat").style.display='none';
+    document.getElementById("ResidencyStat2").style.display='none';
+  } else{ var Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid;
+  document.getElementById("ResidencyStat").style.display='inline';
+  document.getElementById("ResidencyStat2").style.display='inline'; }
 
     // Call Function - Display Table
     tuitionTable(Totalid, Honorsid);
@@ -115,6 +132,7 @@ function showInfo()
           $(".FTH").css({"background-color":"#FFD200", "font-size":"16px", "border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center", "font-weight":"bold" });
           $("table").css({"border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center" });
           $("td").css({"border-spacing":"0px" , "border":"1px solid #cccccc", "text-align":"center"});
+          showButton();
 
         }
 
@@ -153,7 +171,7 @@ function showInfo()
           $(".FTH").css({"background-color":"#FFD200", "font-size":"16px", "border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center", "font-weight":"bold" });
           $("table").css({"border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center" });
           $("td").css({"border-spacing":"0px" , "border":"1px solid #cccccc", "text-align":"center"});
-
+          showButton();
         }
       });
 
