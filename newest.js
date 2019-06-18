@@ -132,6 +132,7 @@ function showInfo()
           $(".FTH").css({"background-color":"#FFD200", "font-size":"16px", "border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center", "font-weight":"bold" });
           $("table").css({"border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center" });
           $("td").css({"border-spacing":"0px" , "border":"1px solid #cccccc", "text-align":"center"});
+          $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
           showButton();
 
         }
@@ -171,6 +172,7 @@ function showInfo()
           $(".FTH").css({"background-color":"#FFD200", "font-size":"16px", "border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center", "font-weight":"bold" });
           $("table").css({"border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center" });
           $("td").css({"border-spacing":"0px" , "border":"1px solid #cccccc", "text-align":"center"});
+          $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
           showButton();
         }
       });
