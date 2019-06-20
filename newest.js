@@ -1,4 +1,3 @@
-
   window.onload=function(){
     document.getElementById("buttonFee").style.display='none';
 }
@@ -79,9 +78,9 @@ function showInfo()
     var Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-ONLINE';
     document.getElementById("ResidencyStat").style.display='none';
     document.getElementById("ResidencyStat2").style.display='none';
-  } else{ var Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid;
-  document.getElementById("ResidencyStat").style.display='inline';
-  document.getElementById("ResidencyStat2").style.display='inline'; }
+    } else{ var Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid;
+    document.getElementById("ResidencyStat").style.display='inline';
+    document.getElementById("ResidencyStat2").style.display='inline'; }
 
     // Call Function - Display Table
     tuitionTable(Totalid, Honorsid);
@@ -101,32 +100,40 @@ function showInfo()
         if(Totalid == val["TuitionIdentifier"] && Honorsid === false)
         {
 
-          var tableResult = '<h2>Tuition Fees</h2>'+
-          '<table><tr><th class="FTH">Tuition</th><th class="FTH">Fees</th><th class="FTH"">Total</th><tr><td>' +
-          val["Tuition"] +
+          var tableResult = '<h2>Tuition &amp; Fees</h2>'+
+          '<table><tbody><tr><th colspan="2" class="FTH">Fall 2019&nbsp;</td><th colspan="2" class="FTH">Spring 2020</td><th class="FTH">Annual Total</td></tr><tr><th class="FTH">Fees</td><th class="FTH">Tuition</td><th class="FTH">Fees</td><th class="FTH">Tuition</td><th class="FTH">&nbsp;</td></tr><tr><td>' +
+          val["Fee Total-F"] +
           '</td><td>' +
-          val["Fee Total"] +
+          val["Tuition-F"] +
+          '</td><td>' +
+          val["Fee Total-S"] +
+          '</td><td>' +
+          val["Tuition-S"] +
           '</td><td>' +
           val["Grand total"] +
-          '</td></tr></table>&nbsp;<br>&nbsp;';
+          '</td></tr></tbody></table>';
+
+          // Leave the tableResultFees alone they are good.
 
           var tableResultFees = '<table><tr><th class="FTH">FA<br>Trust</th><th class="FTH">Health<br>&amp; Rec</th><th class="FTH">Activity</th><th class="FTH">Info<br>Tech</th><th class="FTH">Green</th><th class="FTH">ASNAU</th><th class="FTH">Athletics</th><th class="FTH">Fee<br>Total</th></tr><tr><td>' +
-          val["FA Trust"] +
+          val["FA Trust-F"] +
           '</td><td>' +
-          val["Health/Rec"] +
+          val["Health/Rec-F"] +
           '</td><td>' +
-          val["Activity"] +
+          val["Activity-F"] +
           '</td><td>' +
-          val["Info Tech"] +
+          val["Info Tech-F"] +
           '</td><td>' +
-          val["Green"] +
+          val["Green-F"] +
           '</td><td>' +
-          val["ASNAU"] +
+          val["ASNAU-F"] +
           '</td><td>' +
-          val["Athletics"] +
+          val["Athletics-F"] +
           '</td><td>' +
-          val["Fee Total"] +
+          val["Fee Total-F"] +
           '</td></tr></table>';
+
+
           $('#result1').append(tableResult);
           $('#result2').append(tableResultFees);
           $(".FTH").css({"background-color":"#FFD200", "font-size":"16px", "border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center", "font-weight":"bold" });
@@ -135,38 +142,43 @@ function showInfo()
           $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
           showButton();
 
+
         }
 
         else if (Totalid == val["TuitionIdentifier"] && Honorsid === true) {
 
-          var tableResult = '<h2>Tuition Fees</h2>'+
+          var tableResult = '<h2>Tuition &amp; Fees</h2>'+
           '<table><tr><th class="FTH">Tuition</th><th class="FTH">TuitionZ</th><th class="FTH">Fees</th><th class="FTH"">Total</th><tr><td>' +
-          val["Tuition"] +
+          val["Tuition-F"] +
           '</td><td>' +
-          val["Tuition"] +
+          val["Tuition-S"] +
           '</td><td>' +
-          val["Fee Total"] +
+          val["Fee Total-F"] +
           '</td><td>' +
           val["Grand total"] +
           '</td></tr></table>&nbsp;<br>&nbsp;';
 
+
+          // Leave the tableResultFees alone they are good.
+
           var tableResultFees = '<table><tr><th class="FTH">FA<br>Trust</th><th class="FTH">Health<br>&amp; Rec</th><th class="FTH">Activity</th><th class="FTH">Info<br>Tech</th><th class="FTH">Green</th><th class="FTH">ASNAU</th><th class="FTH">Athletics</th><th class="FTH">Fee<br>Total</th></tr><tr><td>' +
-          val["FA Trust"] +
+          val["FA Trust-F"] +
           '</td><td>' +
-          val["Health/Rec"] +
+          val["Health/Rec-F"] +
           '</td><td>' +
-          val["Activity"] +
+          val["Activity-F"] +
           '</td><td>' +
-          val["Info Tech"] +
+          val["Info Tech-F"] +
           '</td><td>' +
-          val["Green"] +
+          val["Green-F"] +
           '</td><td>' +
-          val["ASNAU"] +
+          val["ASNAU-F"] +
           '</td><td>' +
-          val["Athletics"] +
+          val["Athletics-F"] +
           '</td><td>' +
-          val["Fee Total"] +
+          val["Fee Total-F"] +
           '</td></tr></table>';
+
           $('#result1').append(tableResult);
           $('#result2').append(tableResultFees);
           $(".FTH").css({"background-color":"#FFD200", "font-size":"16px", "border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center", "font-weight":"bold" });
