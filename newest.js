@@ -133,7 +133,6 @@ function showInfo()
           val["Fee Total-F"] +
           '</td></tr></table>';
 
-
           $('#result1').append(tableResult);
           $('#result2').append(tableResultFees);
           $(".FTH").css({"background-color":"#FFD200", "font-size":"16px", "border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center", "font-weight":"bold" });
@@ -141,6 +140,7 @@ function showInfo()
           $("td").css({"border-spacing":"0px" , "border":"1px solid #cccccc", "text-align":"center"});
           $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
           showButton();
+          scrollWin();
 
 
         }
@@ -186,6 +186,7 @@ function showInfo()
           $("td").css({"border-spacing":"0px" , "border":"1px solid #cccccc", "text-align":"center"});
           $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
           showButton();
+          scrollWin();
         }
       });
 
@@ -200,4 +201,8 @@ function showInfo()
   } else {
     x.style.display = "block";
   }
+}
+
+function scrollWin() {
+  window.scrollBy(250, 0);
 }
