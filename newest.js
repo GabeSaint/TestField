@@ -204,5 +204,5 @@ function showInfo()
 }
 
 function scrollWin() {
-  window.scrollBy(0, 250);
+  window.scrollBy(0, 350);
 }
