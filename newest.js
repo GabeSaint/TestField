@@ -133,6 +133,7 @@ function showInfo()
           val["Fee Total-F"] +
           '</td></tr></table>';
 
+
           $('#result1').append(tableResult);
           $('#result2').append(tableResultFees);
           $(".FTH").css({"background-color":"#FFD200", "font-size":"16px", "border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center", "font-weight":"bold" });
@@ -204,5 +205,5 @@ function showInfo()
 }
 
 function scrollWin() {
-  window.scrollBy(0, 350);
+  window.scrollTo(0, 200);
 }
