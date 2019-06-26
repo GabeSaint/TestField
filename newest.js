@@ -93,6 +93,8 @@ function showInfo()
   if (Locationid == "SWC"){
 
     document.getElementById('WUE').style.display='none';
+  }else {
+    document.getElementById('WUE').style.display='inline';
   }
 
     // Call Function - Display Table
