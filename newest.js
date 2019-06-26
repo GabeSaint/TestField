@@ -82,6 +82,19 @@ function showInfo()
     document.getElementById("ResidencyStat").style.display='inline';
     document.getElementById("ResidencyStat2").style.display='inline'; }
 
+    if ( Locationid == "ONLINE" || Locationid == "SWC" || Locationid == "YUMA" ){
+    document.getElementById("Honors").style.display='none';
+    document.getElementById("Honors2").style.display='none';
+  } else {
+    document.getElementById("Honors").style.display='inline';
+    document.getElementById("Honors2").style.display='inline';
+  }
+
+  if (Locationid == "SWC"){
+
+    document.getElementById('WUE').style.display='none';
+  }
+
     // Call Function - Display Table
     tuitionTable(Totalid, Honorsid);
   }
@@ -131,7 +144,9 @@ function showInfo()
           val["Athletics-F"] +
           '</td><td>' +
           val["Fee Total-F"] +
-          '</td></tr></table>';
+          '</td></tr></table>'+
+          '<br>' +
+          "<p><a title='Program Fees' href='https://stage.wp.nau.edu/pubops-testing-sandbox/program-fees/'>View our Program Fees</a></p>";
 
 
           $('#result1').append(tableResult);
@@ -178,7 +193,9 @@ function showInfo()
           val["Athletics-F"] +
           '</td><td>' +
           val["Fee Total-F"] +
-          '</td></tr></table>';
+          '</td></tr></table>' +
+          '<br>' +
+          "<p><a title='Program Fees' href='https://stage.wp.nau.edu/pubops-testing-sandbox/program-fees/'>View our Program Fees</a></p>";
 
           $('#result1').append(tableResult);
           $('#result2').append(tableResultFees);
@@ -202,6 +219,7 @@ function showInfo()
   } else {
     x.style.display = "block";
   }
+
 }
 
 function scrollWin() {
