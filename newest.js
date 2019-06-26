@@ -82,7 +82,7 @@ function showInfo()
     } else{ var Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid;
     document.getElementById("ResidencyStat").style.display='inline';
     document.getElementById("ResidencyStat2").style.display='inline';
-    document.getElementById('buffer').style.display='none';}
+    document.getElementById('buffer').style.display='none'; }
 
     if ( Locationid == "ONLINE" || Locationid == "SWC" || Locationid == "YUMA" ){
     document.getElementById("Honors").style.display='none';
@@ -99,8 +99,15 @@ function showInfo()
     document.getElementById('WUE').style.display='inline';
   }
 
-    // Call Function - Display Table
-    tuitionTable(Totalid, Honorsid);
+if (Locationid == "SWC" && ResidencyStat == "WUE"){
+
+  document.getElementById('errorMessage').innerHTML = "<p>You Done Goofed</p>"
+}else {
+  // Call Function - Display Table
+  tuitionTable(Totalid, Honorsid);
+
+}
+
   }
 
   function tuitionTable(Totalid, Honorsid)
