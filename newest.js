@@ -81,7 +81,8 @@ function showInfo()
     document.getElementById('buffer').innerHTML = "<br> <br> <br>"
     } else{ var Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid;
     document.getElementById("ResidencyStat").style.display='inline';
-    document.getElementById("ResidencyStat2").style.display='inline'; }
+    document.getElementById("ResidencyStat2").style.display='inline';
+    document.getElementById('buffer').style.display='none';}
 
     if ( Locationid == "ONLINE" || Locationid == "SWC" || Locationid == "YUMA" ){
     document.getElementById("Honors").style.display='none';
