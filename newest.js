@@ -218,7 +218,7 @@ function tuitionTable(Totalid, Honorsid)
         document.getElementById("errorMessage").style.display='none';
       }
 
-      else if (Totalid !== val["TuitionIdentifier"]) {
+      else if (Totalid !== val["TuitionIdentifier"] && (Academicid && StudentStatid && Locationid && ResidencyStatid) !== defaultDDval  ) {
         var errorResponse = "You done GOOFED";
         $('#errorMessage').append(errorResponse);
 
