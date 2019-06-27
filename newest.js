@@ -66,6 +66,7 @@ function showInfo()
     //clear previous results
     $('#result1').html('');
     $('#result2').html('');
+    document.getElementById("buttonFee").style.display='none';
 
 
     //get the id of the select
