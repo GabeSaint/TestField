@@ -2,8 +2,6 @@
     document.getElementById("buttonFee").style.display='none';
 }
 
-
-
 $.ajax({
   url: 'https://raw.githubusercontent.com/GabeSaint/TestField/master/tuitionsample.json',
   dataType: 'json',
@@ -104,14 +102,8 @@ function showInfo()
     Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid;
   }
 
-if (Locationid == "SWC" && ResidencyStat == "WUE"){
-
-  document.getElementById('errorMessage').innerHTML = "<p>You Done Goofed</p>"
-}else {
   // Call Function - Display Table
   tuitionTable(Totalid, Honorsid);
-
-}
 
   }
 
