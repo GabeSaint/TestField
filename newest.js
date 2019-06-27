@@ -48,10 +48,16 @@ $.ajax({
   }
 })
 
-function showButton()
+function showButton(verifyVal)
 {
-  document.getElementById("buttonFee").style.display='block';
-
+  var checker = verifyVal.includes("SWC-WUE")
+  if (checker === false ) 
+  {
+    document.getElementById("buttonFee").style.display='block';
+  }
+  else {
+    document.getElementById("errorMessage").innerHTML = "<p>You Done Goofed</p>";
+        }
   }
 
 
@@ -163,7 +169,7 @@ function showInfo()
           $("table").css({"border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center" });
           $("td").css({"border-spacing":"0px" , "border":"1px solid #cccccc", "text-align":"center"});
           $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
-          showButton();
+          showButton(Totalid);
           scrollWin();
 
 
@@ -211,7 +217,7 @@ function showInfo()
           $("table").css({"border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center" });
           $("td").css({"border-spacing":"0px" , "border":"1px solid #cccccc", "text-align":"center"});
           $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
-          showButton();
+          showButton(Totalid);
           scrollWin();
         }
       });
