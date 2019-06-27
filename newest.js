@@ -87,16 +87,21 @@ function showInfo()
     if ( Locationid == "ONLINE" || Locationid == "SWC" || Locationid == "YUMA" ){
     document.getElementById("Honors").style.display='none';
     document.getElementById("Honors2").style.display='none';
+    Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid;
+    
   } else {
     document.getElementById("Honors").style.display='inline';
     document.getElementById("Honors2").style.display='inline';
+    Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid;
   }
 
   if (Locationid == "SWC"){
 
     document.getElementById('WUE').style.display='none';
+    Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid;
   }else {
     document.getElementById('WUE').style.display='inline';
+    Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid;
   }
 
 if (Locationid == "SWC" && ResidencyStat == "WUE"){
