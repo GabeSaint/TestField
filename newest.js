@@ -48,16 +48,9 @@ $.ajax({
   }
 })
 
-function showButton(verifyVal)
+function showButton()
 {
-  var checker = verifyVal.includes("SWC-WUE")
-  if (checker === false ) 
-  {
     document.getElementById("buttonFee").style.display='block';
-  }
-  else {
-    document.getElementById("errorMessage").innerHTML = "<p>You Done Goofed</p>";
-        }
   }
 
 
