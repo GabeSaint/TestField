@@ -218,7 +218,7 @@ function tuitionTable(Totalid, Honorsid)
         document.getElementById("errorMessage").style.display='none';
       }
 
-      else if (Totalid == val["TuitionIdentifier"]) {
+      else if (Totalid !== val["TuitionIdentifier"]) {
         document.getElementById("errorMessage").style.display='block';
         document.getElementById("errorMessage").innerHTML = "<p>You Done Goofed</p>";
 
