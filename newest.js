@@ -215,7 +215,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
         scrollWin();
       }
 
-      }
+      
     });
 
   });
