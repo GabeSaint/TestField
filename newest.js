@@ -215,9 +215,6 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
         scrollWin();
       }
 
-      else if (Totalid !== val["TuitionIdentifier"] && (Yearid && StudentStatid && Locationid && ResidencyStatid) !== "defaultDDval"  ) {
-        alert("This Combination seems to be invalid. Try another combination or reach out to SDAS.");
-
       }
     });
 
