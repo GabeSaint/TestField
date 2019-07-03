@@ -1,0 +1,38 @@
+<div class="tuitionDrops">
+  <div class="tuitionCol">
+      <label>Academic Year: </label>
+      <select id="Year" style="width: 300px;" name="Year Select" onchange="showInfo()">
+      <option id="defaultDDval">Select your academic Year</option>
+      </select><div id='buffer'></div>
+      <label>Student Status: </label>
+      <select id="StudentStat" style="width: 300px;" name="Student Status Select" onchange="showInfo()">
+      <option id="defaultDDval">Select a status</option>
+      </select>
+      <label>Location: </label>
+      <select id="Location" style="width: 300px;" name="Location Select" onchange="showInfo()">
+      <option id="defaultDDval">Choose your campus</option>
+      </select>
+    </div>
+  <div class="tuitionCol">
+    <div id="ResidencyStat2">
+      <label >Residency Status: </label>
+        <select id="ResidencyStat" style="width: 300px;" name="Residency Status Select" onchange="showInfo()" >
+        <option id="defaultDDval">Select your residency status</option>
+        </select>
+      </div>
+      <br>
+      <input id="Honors" type="checkbox" name="HonorsCheck" value="True" onchange="showInfo()"><span id="Honors2" style="font-size:16px">  I will be a new Honors student.</span><br>
+    </div>
+  </div>
+
+    <hr>
+    <div id="result1"></div>
+    <div id=hiddenFeeSection class="hiddenFees">
+      <button id="buttonFee" onclick="toggleFees()">Advanced Fees Breakdown</button>
+
+        <br><br>
+      <div id="tuitionFeesDisplay">
+      <div id="result2" style="display: none;"></div>
+    </div>
+    </div>
+<div id="errorMessage"></div>
