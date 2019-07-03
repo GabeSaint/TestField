@@ -108,7 +108,7 @@ tuitionTable(Totalid, Honorsid);
 
 }
 
-function tuitionTable(Totalid, Honorsid)
+function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, ResidencyStatid)
 {
   // Data placement
   $('#result1').append("<div></div>");
