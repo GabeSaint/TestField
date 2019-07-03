@@ -166,8 +166,6 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
         $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
         showButton(Totalid);
         scrollWin();
-        document.getElementById("errorMessage").style.display='none';
-
 
       }
 
@@ -215,12 +213,10 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
         $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
         showButton(Totalid);
         scrollWin();
-        document.getElementById("errorMessage").style.display='none';
       }
 
-      else if (Totalid !== val["TuitionIdentifier"] && (Yearid && StudentStatid && Locationid && ResidencyStatid) !== defaultDDval  ) {
-        var errorResponse = "You done GOOFED";
-        $('#errorMessage').append(errorResponse);
+      else if (Totalid !== val["TuitionIdentifier"] && (Yearid && StudentStatid && Locationid && ResidencyStatid) !== "defaultDDval"  ) {
+        alert("This Combination seems to be invalid. Try another combination or reach out to SDAS.");
 
       }
     });
