@@ -142,8 +142,16 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
   {
     $.each(data, function(key, val)
     {
-      if (Yearid == "S19" || Yearid == "W19") {
+      if (Yearid == "S19") {
         if (Totalid == val["TuitionIdentifier"]) {
+           if (val["Grand total"] == "EMPTY") {
+            var tableResult = "<p>An invalid option has been chosen, please make a different selection.</p>"
+            $('#result1').append(tableResult);
+            $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
+            scrollWin();
+          } else {
+
+
 
          var tableResult = '<h2>Tuition &amp; Fees</h2><table><tr><th class="FTH">Fees</th><th class="FTH">Tuition</th> <th class="FTH">Total</th></tr><tr><td>' +
            val["Fee Total-F"] +
@@ -164,7 +172,51 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
     '</td><td>'+
       val["Fee Total-F"]+
     '</td></tr></table>'+
-    "<p><a title='Program Fees' href='https://stage.wp.nau.edu/pubops-testing-sandbox/program-fees/'>View our Program Fees</a></p>";
+    "<p><a title='Program Fees' href='https://stage.wp.nau.edu/pubops-testing-sandbox/program-fees/'>View the Program Fees</a></p>";
+
+         $('#result1').append(tableResult);
+         $('#result2').append(tableResultFees);
+         $(".FTH").css({"background-color":"#FFD200", "font-size":"16px", "border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center", "font-weight":"bold" });
+         $("table").css({"border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center" });
+         $("td").css({"border-spacing":"0px" , "border":"1px solid #cccccc", "text-align":"center"});
+         $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
+         showButton(Totalid);
+         scrollWin();
+       }
+
+       }
+
+
+      }
+
+      else if ( Yearid == "W19") {
+        if (Totalid == val["TuitionIdentifier"]) {
+
+          if (val["Grand total"] == "EMPTY") {
+           var tableResult = "<p>An invalid option has been chosen, please make a different selection.</p>"
+           $('#result1').append(tableResult);
+           $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
+           scrollWin();
+         } else {
+
+
+
+         var tableResult = '<h2>Tuition &amp; Fees</h2><table><tr><th class="FTH">Fees</th><th class="FTH">Tuition</th> <th class="FTH">Total</th></tr><tr><td>' +
+           val["Fee Total-F"] +
+         '</td><td>' +
+           val["Tuition-F"] +
+         '</td><td>' +
+      val["Grand total"] +
+    '</td></tr></table>';
+
+         var tableResultFees = '<table><tr><th class="FTH">FA<br>Trust</th><th class="FTH">Info<br>Tech</th><th class="FTH">Fee<br>Total</th></tr><tr><td>' +
+           val["FA Trust-F"] +
+         '</td><td>' +
+      val["Info Tech-F"] +
+    '</td><td>'+
+      val["Fee Total-F"]+
+    '</td></tr></table>'+
+    "<p><a title='Program Fees' href='https://stage.wp.nau.edu/pubops-testing-sandbox/program-fees/'>View the Program Fees</a></p>";
 
          $('#result1').append(tableResult);
          $('#result2').append(tableResultFees);
@@ -176,9 +228,13 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
          scrollWin();
 
        }
+     }
+
+      }
 
 
-      }else {
+
+      else {
 
 
       // Check the Degree Code
@@ -218,7 +274,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
         val["Fee Total-F"] +
         '</td></tr></table>'+
         '<br>' +
-        "<p><a title='Program Fees' href='https://stage.wp.nau.edu/pubops-testing-sandbox/program-fees/'>View our Program Fees</a></p>";
+        "<p><a title='Program Fees' href='https://stage.wp.nau.edu/pubops-testing-sandbox/program-fees/'>View the Program Fees</a></p>";
 
 
         $('#result1').append(tableResult);
@@ -266,7 +322,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
         val["Fee Total-F"] +
         '</td></tr></table>' +
         '<br>' +
-        "<p><a title='Program Fees' href='https://stage.wp.nau.edu/pubops-testing-sandbox/program-fees/'>View our Program Fees</a></p>";
+        "<p><a title='Program Fees' href='https://stage.wp.nau.edu/pubops-testing-sandbox/program-fees/'>View the Program Fees</a></p>";
 
         $('#result1').append(tableResult);
         $('#result2').append(tableResultFees);
