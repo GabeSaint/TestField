@@ -128,7 +128,7 @@ document.getElementById('buffer').style.display='none';
 }
 
 // Call Function - Display Table
-tuitionTable(Totalid, Honorsid, Yearid);
+tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, ResidencyStatid);
 
 }
 
@@ -137,6 +137,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
   // Data placement
   $('#result1').append("<div></div>");
   $('#result2').append("<div></div>");
+  $('#errorMessage').append("<div></div>");
 
   $.getJSON('https://raw.githubusercontent.com/GabeSaint/TestField/master/tuitionsample.json', function(data)
   {
@@ -149,6 +150,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
             $('#result1').append(tableResult);
             $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
             scrollWin();
+            whatWUE(ResidencyStatid);
           } else {
 
 
@@ -182,6 +184,8 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
          $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
          showButton(Totalid);
          scrollWin();
+         whatWUE(ResidencyStatid);
+
        }
 
        }
@@ -197,11 +201,13 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
            $('#result1').append(tableResult);
            $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
            scrollWin();
+           whatWUE(ResidencyStatid);
+
          } else {
 
 
 
-         var tableResult = '<h2>Tuition &amp; Fees</h2><table><tr><th class="FTH">Fees</th><th class="FTH">Tuition</th> <th class="FTH">Total</th></tr><tr><td>' +
+         var tableResult = '<h2>Tuition &amp; Fees</h2><p>4 credit hours values are being shown.</p><table><tr><th class="FTH">Fees</th><th class="FTH">Tuition</th> <th class="FTH">Total</th></tr><tr><td>' +
            val["Fee Total-F"] +
          '</td><td>' +
            val["Tuition-F"] +
@@ -226,6 +232,8 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
          $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
          showButton(Totalid);
          scrollWin();
+         whatWUE(ResidencyStatid);
+
 
        }
      }
@@ -285,6 +293,8 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
         $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
         showButton(Totalid);
         scrollWin();
+        whatWUE(ResidencyStatid);
+
 
       }
 
@@ -332,6 +342,8 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
         $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
         showButton(Totalid);
         scrollWin();
+        whatWUE(ResidencyStatid);
+
       }
     }
     });
@@ -352,4 +364,11 @@ if (x.style.display === "block") {
 
 function scrollWin() {
 window.scrollTo(0, 300);
+}
+
+function whatWUE(checkWUE){
+  if (checkWUE == "WUE") {
+    var WUENote = '<p><a href="https://nau.edu/admission/western-undergraduate-exchange/" target="_blank">What is the Western Undergraduate Exchange (WUE)?</a></p>';
+    $('#errorMessage').append(WUENote);
+  }
 }
