@@ -59,6 +59,7 @@ function showInfo()
   //clear previous results
   $('#result1').html('');
   $('#result2').html('');
+  $('#errorMessage').html('');
   document.getElementById("buttonFee").style.display='none';
 
 
@@ -207,7 +208,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
 
 
 
-         var tableResult = '<h2>Tuition &amp; Fees</h2><p>4 credit hours values are being shown.</p><table><tr><th class="FTH">Fees</th><th class="FTH">Tuition</th> <th class="FTH">Total</th></tr><tr><td>' +
+         var tableResult = '<h2>Tuition &amp; Fees</h2><p>4 credit-hour values are being shown.</p><table><tr><th class="FTH">Fees</th><th class="FTH">Tuition</th> <th class="FTH">Total</th></tr><tr><td>' +
            val["Fee Total-F"] +
          '</td><td>' +
            val["Tuition-F"] +
