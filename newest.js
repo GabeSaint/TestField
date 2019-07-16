@@ -152,7 +152,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
             $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
             scrollWin();
             whatWUE(ResidencyStatid);
-             OnlineCreditHours(Locationid, Honorsid);
+             OnlineCreditHours(Locationid);
           } else {
 
 
@@ -187,7 +187,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
          showButton(Totalid);
          scrollWin();
          whatWUE(ResidencyStatid);
-            OnlineCreditHours(Locationid, Honorsid);
+            OnlineCreditHours(Locationid);
 
        }
 
@@ -205,7 +205,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
            $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
            scrollWin();
            whatWUE(ResidencyStatid);
-            OnlineCreditHours(Locationid, Honorsid);
+            OnlineCreditHours(Locationid);
 
          } else {
 
@@ -237,7 +237,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
          showButton(Totalid);
          scrollWin();
          whatWUE(ResidencyStatid);
-           OnlineCreditHours(Locationid, Honorsid);
+           OnlineCreditHours(Locationid);
 
 
        }
@@ -300,7 +300,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
         showButton(Totalid);
         scrollWin();
         whatWUE(ResidencyStatid);
-        OnlineCreditHours(Locationid, Honorsid);
+        OnlineCreditHours(Locationid);
         
          if (Locationid == "ONLINE") {
           document.getElementById("headingTextHours").style.display='none';
@@ -309,7 +309,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
 
       }
 
-      else if (Totalid == val["TuitionIdentifier"] && Honorsid === true) {
+      else if (Totalid == val["TuitionIdentifier"] && Honorsid == true) {
         
         var stringINT = val["Grand total"];
         var HTY = Number(stringINT.replace(/[^0-9\.]+/g,""));
@@ -391,8 +391,8 @@ function whatWUE(checkWUE){
   }
 }
 
-function OnlineCreditHours(Locationid, Honorsid){
-  if (Locationid == "ONLINE" && && Honorsid === true) {
+function OnlineCreditHours(Locationid){
+  if (Locationid == "ONLINE") {
     var CreditHours = '<p>Hello There, You found me. I am just a test</p>';
     $('#result1').append(CreditHours);
   }
