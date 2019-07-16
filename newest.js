@@ -152,6 +152,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
             $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
             scrollWin();
             whatWUE(ResidencyStatid);
+             OnlineCreditHours();
           } else {
 
 
@@ -186,6 +187,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
          showButton(Totalid);
          scrollWin();
          whatWUE(ResidencyStatid);
+            OnlineCreditHours();
 
        }
 
@@ -203,6 +205,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
            $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
            scrollWin();
            whatWUE(ResidencyStatid);
+            OnlineCreditHours();
 
          } else {
 
@@ -234,6 +237,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
          showButton(Totalid);
          scrollWin();
          whatWUE(ResidencyStatid);
+           OnlineCreditHours();
 
 
        }
@@ -296,6 +300,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
         showButton(Totalid);
         scrollWin();
         whatWUE(ResidencyStatid);
+        OnlineCreditHours();
         
          if (Locationid == "ONLINE") {
           document.getElementById("headingTextHours").style.display='none';
@@ -383,5 +388,12 @@ function whatWUE(checkWUE){
   if (checkWUE == "WUE") {
     var WUENote = '<p><a href="https://nau.edu/admission/western-undergraduate-exchange/" target="_blank">What is the Western Undergraduate Exchange (WUE)?</a></p>';
     $('#errorMessage').append(WUENote);
+  }
+}
+
+function OnlineCreditHours(){
+  if (Locationid == "ONLINE") {
+    var CreditHours = '<p>Hello There, You found me. I am just a test</p>';
+    $('#result1').append(CreditHours);
   }
 }
