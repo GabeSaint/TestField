@@ -152,7 +152,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
             $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
             scrollWin();
             whatWUE(ResidencyStatid);
-             OnlineCreditHours(Locationid);
+             OnlineCreditHours(Locationid, Honorsid);
           } else {
 
 
@@ -187,7 +187,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
          showButton(Totalid);
          scrollWin();
          whatWUE(ResidencyStatid);
-            OnlineCreditHours(Locationid);
+            OnlineCreditHours(Locationid, Honorsid);
 
        }
 
@@ -205,7 +205,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
            $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
            scrollWin();
            whatWUE(ResidencyStatid);
-            OnlineCreditHours(Locationid);
+            OnlineCreditHours(Locationid, Honorsid);
 
          } else {
 
@@ -237,7 +237,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
          showButton(Totalid);
          scrollWin();
          whatWUE(ResidencyStatid);
-           OnlineCreditHours(Locationid);
+           OnlineCreditHours(Locationid, Honorsid);
 
 
        }
@@ -300,7 +300,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
         showButton(Totalid);
         scrollWin();
         whatWUE(ResidencyStatid);
-        OnlineCreditHours(Locationid);
+        OnlineCreditHours(Locationid, Honorsid);
         
          if (Locationid == "ONLINE") {
           document.getElementById("headingTextHours").style.display='none';
@@ -392,7 +392,7 @@ function whatWUE(checkWUE){
 }
 
 function OnlineCreditHours(Locationid){
-  if (Locationid == "ONLINE") {
+  if (Locationid == "ONLINE" && && Honorsid === true) {
     var CreditHours = '<p>Hello There, You found me. I am just a test</p>';
     $('#result1').append(CreditHours);
   }
