@@ -298,7 +298,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
         whatWUE(ResidencyStatid);
         
          if (Locationid == "ONLINE") {
-          document.getElementById("headingTextHours").style.display='block';
+          document.getElementById("headingTextHours").style.display='none';
         }
 
 
