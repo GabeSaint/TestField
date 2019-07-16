@@ -391,7 +391,7 @@ function whatWUE(checkWUE){
   }
 }
 
-function OnlineCreditHours(Locationid){
+function OnlineCreditHours(Locationid, Honorsid){
   if (Locationid == "ONLINE" && && Honorsid === true) {
     var CreditHours = '<p>Hello There, You found me. I am just a test</p>';
     $('#result1').append(CreditHours);
