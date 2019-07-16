@@ -307,11 +307,12 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
       else if (Totalid == val["TuitionIdentifier"] && Honorsid === true) {
         
         var stringINT = val["Grand total"];
-        subAT = stringINT.substring(1);
-        var totalHonorsYear = parseInt(subAT) + 700;
+        var HTY = Number(stringINT.replace(/[^0-9\.]+/g,""));
+        var totalHonorsYear = parseInt(HTY) + 700;
+        totalHonorsYear = (totalHonorsYear).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 
         var tableResult = '<h2>Tuition &amp; Fees <span id="headingTextHours">(for 12+ hours)</span></h2>'+
-        '<table><tbody><tr><th colspan="3" class="FTH">Fall 2019&nbsp;</td><th colspan="3" class="FTH">Spring 2020</td><th class="FTH">Annual Total</td></tr><tr><th class="FTH">Fee</td><th class="FTH">HonorsFees</td><th class="FTH">Tuition</td><th class="FTH">Fees</td><th class="FTH">HonorsFees</td><th class="FTH">Tuition</td><th class="FTH">&nbsp;</td></tr><tr><td>' +
+        '<table><tbody><tr><th colspan="3" class="FTH">Fall 2019&nbsp;</td><th colspan="3" class="FTH">Spring 2020</td><th class="FTH">Annual Total</td></tr><tr><th class="FTH">Fee</td><th class="FTH">Honors Fees</td><th class="FTH">Tuition</td><th class="FTH">Fees</td><th class="FTH">Honors Fees</td><th class="FTH">Tuition</td><th class="FTH">&nbsp;</td></tr><tr><td>' +
         val["Fee Total-F"] +
         '</td><td>$350</td><td>' +
         val["Tuition-F"] +
