@@ -517,7 +517,7 @@ function whatWUE(checkWUE){
 function OnlineCreditHours(Locationid, Yearid, TuitionFval,FeeFVal, TuitionSval,FeeSVal, ECH1,ECH2,ECH3,ECH4,ECH5,ECH6,ECH7,ECH8,ECH9,ECH10,ECH11,ECH12,ECH13,ECH14,ECH15,ECH16,ECH17,ECH18,ECH19,ECH20){
   if (Locationid == "ONLINE" && Yearid == "1920") {
     var CreditHours = '<br>'+
-'<table><tr><th class="FTH"> </th><th colspan="2" class="FTH">Fall</th> <th colspan="2" class="FTH">Spring</th></tr><tr><th class="FTH">Hours</th><th class="FTH">Fee</th><th class="FTH">Tuition</th><th class="FTH">Fee</th><th class="FTH">Tuition</th></tr><tr><td>1</td><td>' +
+'<table><tr><th class="FTH"> </th><th colspan="2" class="FTH">Fall</th> <th colspan="2" class="FTH">Spring</th></tr><tr><th class="FTH">Hour(s)</th><th class="FTH">Fee</th><th class="FTH">Tuition</th><th class="FTH">Fee</th><th class="FTH">Tuition</th></tr><tr><td>1</td><td>' +
 ECH1 +
 '</td><td>'+
 ECH6 +
@@ -574,8 +574,37 @@ ECH20 +
   }
   
   else if (Locationid == "ONLINE" && Yearid == "S19") {
-    var CreditHours = "I'm a test";
-    alert(CreditHours);
+    var CreditHours = '<br>'+
+'<table><tr><th class="FTH">Hour(s)</th><th class="FTH">Fee</th><th class="FTH">Tuition</th></tr><tr><td>1</td><td>' +
+ECH1 +
+'</td><td>'+
+ECH6 +
+'</td></tr><tr><td>3</td><td>' +
+ECH2 +
+'</td><td>' +
+ECH7 +
+'</td></tr><tr><td>6</td><td>'+
+ECH3 +
+'</td><td>' +
+ECH8 +
+'</td></tr><tr><td>9</td><td>' +
+ECH4 +
+'</td><td>' +
+ECH9 +
+'</td></tr><tr bgcolor="yellow"><td>12</td><td>'+
+TuitionFval  +
+'</td><td>' +
+FeeFVal +
+'</td></tr><tr><td>15</td><td>' +
+ECH5 +
+'</td><td>' +
+ECH10 +
+'</td></tr></table>' +
+'<br>';
+        $('#result1').append(CreditHours);
+    $(".FTH").css({"background-color":"#FFD200", "font-size":"16px", "border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center", "font-weight":"bold" });
+    $("table").css({"border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center" });
+    $("td").css({"border-spacing":"0px" , "border":"1px solid #cccccc", "text-align":"center"});
   }
   
     else if (Locationid == "ONLINE" && Yearid == "W19") {
