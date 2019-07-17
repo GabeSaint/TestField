@@ -543,7 +543,7 @@ ECH13 +
 ECH18 +
 '</td></tr><tr><td>9</td><td>' +
 ECH4 +
-'</td><td>'
+'</td><td>' +
 ECH9 +
 '</td><td>' +
 ECH14 +
