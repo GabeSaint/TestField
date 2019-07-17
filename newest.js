@@ -144,7 +144,18 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
   {
     $.each(data, function(key, val)
     {
-      var ECH1 = val["ECH1"];
+
+
+      
+      if (Yearid == "S19") {
+        if (Totalid == val["TuitionIdentifier"]) {
+           if (val["Grand total"] == "EMPTY") {
+            var tableResult = "<p>An invalid option has been chosen, please make a different selection.</p>"
+            $('#result1').append(tableResult);
+            $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
+            scrollWin();
+            whatWUE(ResidencyStatid);
+     var ECH1 = val["ECH1"];
       var ECH2 = val["ECH2"];
       var ECH3 = val["ECH3"];
       var ECH4 = val["ECH4"];
@@ -168,16 +179,6 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
       var FeeFVal = val["Fee Total-F"];
       var TuitionSval = val["Tuition-S"];
       var FeeSVal =val["Fee Total-S"];
-
-      
-      if (Yearid == "S19") {
-        if (Totalid == val["TuitionIdentifier"]) {
-           if (val["Grand total"] == "EMPTY") {
-            var tableResult = "<p>An invalid option has been chosen, please make a different selection.</p>"
-            $('#result1').append(tableResult);
-            $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
-            scrollWin();
-            whatWUE(ResidencyStatid);
             OnlineCreditHours(Locationid, Yearid, TuitionFval,FeeFVal, TuitionSval,FeeSVal, ECH1,ECH2,ECH3,ECH4,ECH5,ECH6,ECH7,ECH8,ECH9,ECH10,ECH11,ECH12,ECH13,ECH14,ECH15,ECH16,ECH17,ECH18,ECH19,ECH20);
           } else {
 
@@ -213,6 +214,30 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
          showButton(Totalid);
          scrollWin();
          whatWUE(ResidencyStatid);
+                  var ECH1 = val["ECH1"];
+      var ECH2 = val["ECH2"];
+      var ECH3 = val["ECH3"];
+      var ECH4 = val["ECH4"];
+      var ECH5 = val["ECH5"];
+      var ECH6 = val["ECH6"];
+      var ECH7 = val["ECH7"];
+      var ECH8 = val["ECH8"];
+      var ECH9 = val["ECH9"];
+      var ECH10 = val["ECH10"];
+      var ECH11 = val["ECH11"];
+      var ECH12 = val["ECH12"];
+      var ECH13 = val["ECH13"];
+      var ECH14 = val["ECH14"];
+      var ECH15 = val["ECH15"];
+      var ECH16 = val["ECH16"];
+      var ECH17 = val["ECH17"];
+      var ECH18 = val["ECH18"];
+      var ECH19 = val["ECH19"];
+      var ECH20 = val["ECH20"];
+      var TuitionFval = val["Tuition-F"];
+      var FeeFVal = val["Fee Total-F"];
+      var TuitionSval = val["Tuition-S"];
+      var FeeSVal =val["Fee Total-S"];
          OnlineCreditHours(Locationid, Yearid, TuitionFval,FeeFVal, TuitionSval,FeeSVal, ECH1,ECH2,ECH3,ECH4,ECH5,ECH6,ECH7,ECH8,ECH9,ECH10,ECH11,ECH12,ECH13,ECH14,ECH15,ECH16,ECH17,ECH18,ECH19,ECH20);
 
        }
@@ -231,6 +256,30 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
            $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
            scrollWin();
            whatWUE(ResidencyStatid);
+                  var ECH1 = val["ECH1"];
+      var ECH2 = val["ECH2"];
+      var ECH3 = val["ECH3"];
+      var ECH4 = val["ECH4"];
+      var ECH5 = val["ECH5"];
+      var ECH6 = val["ECH6"];
+      var ECH7 = val["ECH7"];
+      var ECH8 = val["ECH8"];
+      var ECH9 = val["ECH9"];
+      var ECH10 = val["ECH10"];
+      var ECH11 = val["ECH11"];
+      var ECH12 = val["ECH12"];
+      var ECH13 = val["ECH13"];
+      var ECH14 = val["ECH14"];
+      var ECH15 = val["ECH15"];
+      var ECH16 = val["ECH16"];
+      var ECH17 = val["ECH17"];
+      var ECH18 = val["ECH18"];
+      var ECH19 = val["ECH19"];
+      var ECH20 = val["ECH20"];
+      var TuitionFval = val["Tuition-F"];
+      var FeeFVal = val["Fee Total-F"];
+      var TuitionSval = val["Tuition-S"];
+      var FeeSVal =val["Fee Total-S"];
            OnlineCreditHours(Locationid, Yearid, TuitionFval,FeeFVal, TuitionSval,FeeSVal, ECH1,ECH2,ECH3,ECH4,ECH5,ECH6,ECH7,ECH8,ECH9,ECH10,ECH11,ECH12,ECH13,ECH14,ECH15,ECH16,ECH17,ECH18,ECH19,ECH20);
 
          } else {
@@ -263,6 +312,30 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
          showButton(Totalid);
          scrollWin();
          whatWUE(ResidencyStatid);
+                 var ECH1 = val["ECH1"];
+      var ECH2 = val["ECH2"];
+      var ECH3 = val["ECH3"];
+      var ECH4 = val["ECH4"];
+      var ECH5 = val["ECH5"];
+      var ECH6 = val["ECH6"];
+      var ECH7 = val["ECH7"];
+      var ECH8 = val["ECH8"];
+      var ECH9 = val["ECH9"];
+      var ECH10 = val["ECH10"];
+      var ECH11 = val["ECH11"];
+      var ECH12 = val["ECH12"];
+      var ECH13 = val["ECH13"];
+      var ECH14 = val["ECH14"];
+      var ECH15 = val["ECH15"];
+      var ECH16 = val["ECH16"];
+      var ECH17 = val["ECH17"];
+      var ECH18 = val["ECH18"];
+      var ECH19 = val["ECH19"];
+      var ECH20 = val["ECH20"];
+      var TuitionFval = val["Tuition-F"];
+      var FeeFVal = val["Fee Total-F"];
+      var TuitionSval = val["Tuition-S"];
+      var FeeSVal =val["Fee Total-S"];
          OnlineCreditHours(Locationid, Yearid, TuitionFval,FeeFVal, TuitionSval,FeeSVal, ECH1,ECH2,ECH3,ECH4,ECH5,ECH6,ECH7,ECH8,ECH9,ECH10,ECH11,ECH12,ECH13,ECH14,ECH15,ECH16,ECH17,ECH18,ECH19,ECH20);
 
 
@@ -326,6 +399,30 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
         showButton(Totalid);
         scrollWin();
         whatWUE(ResidencyStatid);
+              var ECH1 = val["ECH1"];
+      var ECH2 = val["ECH2"];
+      var ECH3 = val["ECH3"];
+      var ECH4 = val["ECH4"];
+      var ECH5 = val["ECH5"];
+      var ECH6 = val["ECH6"];
+      var ECH7 = val["ECH7"];
+      var ECH8 = val["ECH8"];
+      var ECH9 = val["ECH9"];
+      var ECH10 = val["ECH10"];
+      var ECH11 = val["ECH11"];
+      var ECH12 = val["ECH12"];
+      var ECH13 = val["ECH13"];
+      var ECH14 = val["ECH14"];
+      var ECH15 = val["ECH15"];
+      var ECH16 = val["ECH16"];
+      var ECH17 = val["ECH17"];
+      var ECH18 = val["ECH18"];
+      var ECH19 = val["ECH19"];
+      var ECH20 = val["ECH20"];
+      var TuitionFval = val["Tuition-F"];
+      var FeeFVal = val["Fee Total-F"];
+      var TuitionSval = val["Tuition-S"];
+      var FeeSVal =val["Fee Total-S"];
         OnlineCreditHours(Locationid, Yearid, TuitionFval,FeeFVal, TuitionSval,FeeSVal, ECH1,ECH2,ECH3,ECH4,ECH5,ECH6,ECH7,ECH8,ECH9,ECH10,ECH11,ECH12,ECH13,ECH14,ECH15,ECH16,ECH17,ECH18,ECH19,ECH20);
         
          if (Locationid == "ONLINE") {
@@ -419,7 +516,7 @@ function whatWUE(checkWUE){
 
 function OnlineCreditHours(Locationid, Yearid, TuitionFval,FeeFVal, TuitionSval,FeeSVal, ECH1,ECH2,ECH3,ECH4,ECH5,ECH6,ECH7,ECH8,ECH9,ECH10,ECH11,ECH12,ECH13,ECH14,ECH15,ECH16,ECH17,ECH18,ECH19,ECH20){
   if (Locationid == "ONLINE" && Yearid == "1920") {
-    var CreditHours = '<h2>Tuition &amp; Fees<span id="headingTextHours">(for 12+ hours)</span></h2>'+
+    var CreditHours = '<br>'+
 '<table><tr><th></th><th colspan="2">Fall</th> <th colspan="2">Spring</th></tr><tr><th>Hours</th><th>Fee</th><th>Tuition</th><th>Fee</th><th>Tuition</th></tr><tr><td>1</td><td>' +
 ECH1 +
 '</td><td>'+
@@ -436,7 +533,7 @@ ECH7 +
 ECH12 +
 '</td><td>' +
 ECH17 +
-'</td></tr><tr><td>6</td><td>'
+'</td></tr><tr><td>6</td><td>'+
 ECH3 +
 '</td><td>' +
 ECH8 +
@@ -444,7 +541,7 @@ ECH8 +
 ECH13 +
 '</td><td>' +
 ECH18 +
-'</td></tr><tr><td>9</td><td>'
+'</td></tr><tr><td>9</td><td>' +
 ECH4 +
 '</td><td>'
 ECH9 +
