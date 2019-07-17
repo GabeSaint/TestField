@@ -568,6 +568,9 @@ ECH20 +
 '</td></tr></table>' +
 '<br>';
     $('#result1').append(CreditHours);
+    $(".FTH").css({"background-color":"#FFD200", "font-size":"16px", "border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center", "font-weight":"bold" });
+    $("table").css({"border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center" });
+    $("td").css({"border-spacing":"0px" , "border":"1px solid #cccccc", "text-align":"center"});
   }
   
   else if (Locationid == "ONLINE" && Yearid == "S19") {
