@@ -517,7 +517,7 @@ function whatWUE(checkWUE){
 function OnlineCreditHours(Locationid, Yearid, TuitionFval,FeeFVal, TuitionSval,FeeSVal, ECH1,ECH2,ECH3,ECH4,ECH5,ECH6,ECH7,ECH8,ECH9,ECH10,ECH11,ECH12,ECH13,ECH14,ECH15,ECH16,ECH17,ECH18,ECH19,ECH20){
   if (Locationid == "ONLINE" && Yearid == "1920") {
     var CreditHours = '<br>'+
-'<table><tr><th></th><th colspan="2">Fall</th> <th colspan="2">Spring</th></tr><tr><th>Hours</th><th>Fee</th><th>Tuition</th><th>Fee</th><th>Tuition</th></tr><tr><td>1</td><td>' +
+'<table><tr><th></th><th colspan="2" class="FTH">Fall</th> <th colspan="2" class="FTH">Spring</th></tr><tr><th class="FTH">Hours</th><th class="FTH">Fee</th><th class="FTH">Tuition</th><th class="FTH">Fee</th><th class="FTH">Tuition</th></tr><tr><td>1</td><td>' +
 ECH1 +
 '</td><td>'+
 ECH6 +
@@ -566,8 +566,7 @@ ECH15 +
 '</td><td>' +
 ECH20 +
 '</td></tr></table>' +
-'<br>' +
-"<p><a title='Program Fees' href='https://stage.wp.nau.edu/pubops-testing-sandbox/program-fees/'>View the Program Fees</a></p>";
+'<br>';
     $('#result1').append(CreditHours);
   }
   
