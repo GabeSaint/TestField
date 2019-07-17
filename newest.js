@@ -608,7 +608,28 @@ ECH10 +
   }
   
     else if (Locationid == "ONLINE" && Yearid == "W19") {
-    var CreditHours = "I'm a test 2";
-      alert(CreditHours);
+    var CreditHours = '<br>'+
+'<table><tr><th class="FTH">Hour(s)</th><th class="FTH">Fee</th><th class="FTH">Tuition</th></tr><tr><td>1</td><td>' +
+ECH1 +
+'</td><td>'+
+ECH5 +
+'</td></tr><tr><td>2</td><td>' +
+ECH2 +
+'</td><td>' +
+ECH6 +
+'</td></tr><tr><td>3</td><td>'+
+ECH3 +
+'</td><td>' +
+ECH7 +
+'</td></tr><tr bgcolor="yellow"><td>4</td><td>' +
+ECH4 +
+'</td><td>' +
+ECH8 +
+'</td></tr></table>' +
+'<br>';
+    $('#result1').append(CreditHours);
+    $(".FTH").css({"background-color":"#FFD200", "font-size":"16px", "border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center", "font-weight":"bold" });
+    $("table").css({"border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center" });
+    $("td").css({"border-spacing":"0px" , "border":"1px solid #cccccc", "text-align":"center"});
   }
 }
