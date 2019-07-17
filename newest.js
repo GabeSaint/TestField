@@ -453,13 +453,13 @@ ECH14 +
 '</td><td>' +
 ECH19 +
 '</td></tr><tr><td>12</td><td>'+
-val["Tuition-F"] +
+TuitionFval  +
 '</td><td>' +
-val["Fee Total-F"]
+FeeFVal +
 '</td><td>' +
-val["Tuition-S"]
+TuitionSval +
 '</td><td>' +
-val["Fee Total-S"] +
+FeeSVal +
 '</td></tr><tr><td>15</td><td>' +
 ECH5 +
 '</td><td>' +
