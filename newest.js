@@ -144,6 +144,27 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
   {
     $.each(data, function(key, val)
     {
+      var ECH1 = val["ECH1"];
+      var ECH2 = val["ECH2"];
+      var ECH3 = val["ECH3"];
+      var ECH4 = val["ECH4"];
+      var ECH5 = val["ECH5"];
+      var ECH6 = val["ECH6"];
+      var ECH7 = val["ECH7"];
+      var ECH8 = val["ECH8"];
+      var ECH9 = val["ECH9"];
+      var ECH10 = val["ECH10"];
+      var ECH11 = val["ECH11"];
+      var ECH12 = val["ECH12"];
+      var ECH13 = val["ECH13"];
+      var ECH14 = val["ECH14"];
+      var ECH15 = val["ECH15"];
+      var ECH16 = val["ECH16"];
+      var ECH17 = val["ECH17"];
+      var ECH18 = val["ECH18"];
+      var ECH19 = val["ECH19"];
+      var ECH20 = val["ECH20"];
+      
       if (Yearid == "S19") {
         if (Totalid == val["TuitionIdentifier"]) {
            if (val["Grand total"] == "EMPTY") {
@@ -152,7 +173,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
             $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
             scrollWin();
             whatWUE(ResidencyStatid);
-            OnlineCreditHours(Locationid,val["ECH1"],val["ECH2"],val["ECH3"],val["ECH4"],val["ECH5"],val["ECH6"],val["ECH7"],val["ECH8"],val["ECH9"],val["ECH10"],val["ECH11"],val["ECH12"],val["ECH13"],val["ECH14"],val["ECH15"],val["ECH16"],val["ECH17"],val["ECH18"],val["ECH19"],val["ECH20"]);
+            OnlineCreditHours(Locationid,ECH1,ECH2,ECH3,ECH4,ECH5,ECH6,ECH7,ECH8,ECH9,ECH10,ECH11,ECH12,ECH13,ECH14,ECH15,ECH16,ECH17,ECH18,ECH19,ECH20);
           } else {
 
 
@@ -187,7 +208,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
          showButton(Totalid);
          scrollWin();
          whatWUE(ResidencyStatid);
-         OnlineCreditHours(Locationid,val["ECH1"],val["ECH2"],val["ECH3"],val["ECH4"],val["ECH5"],val["ECH6"],val["ECH7"],val["ECH8"],val["ECH9"],val["ECH10"],val["ECH11"],val["ECH12"],val["ECH13"],val["ECH14"],val["ECH15"],val["ECH16"],val["ECH17"],val["ECH18"],val["ECH19"],val["ECH20"]);
+         OnlineCreditHours(Locationid,ECH1,ECH2,ECH3,ECH4,ECH5,ECH6,ECH7,ECH8,ECH9,ECH10,ECH11,ECH12,ECH13,ECH14,ECH15,ECH16,ECH17,ECH18,ECH19,ECH20);
 
        }
 
@@ -205,7 +226,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
            $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
            scrollWin();
            whatWUE(ResidencyStatid);
-           OnlineCreditHours(Locationid,val["ECH1"],val["ECH2"],val["ECH3"],val["ECH4"],val["ECH5"],val["ECH6"],val["ECH7"],val["ECH8"],val["ECH9"],val["ECH10"],val["ECH11"],val["ECH12"],val["ECH13"],val["ECH14"],val["ECH15"],val["ECH16"],val["ECH17"],val["ECH18"],val["ECH19"],val["ECH20"]);
+           OnlineCreditHours(Locationid,ECH1,ECH2,ECH3,ECH4,ECH5,ECH6,ECH7,ECH8,ECH9,ECH10,ECH11,ECH12,ECH13,ECH14,ECH15,ECH16,ECH17,ECH18,ECH19,ECH20);
 
          } else {
 
@@ -237,7 +258,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
          showButton(Totalid);
          scrollWin();
          whatWUE(ResidencyStatid);
-          OnlineCreditHours(Locationid,val["ECH1"],val["ECH2"],val["ECH3"],val["ECH4"],val["ECH5"],val["ECH6"],val["ECH7"],val["ECH8"],val["ECH9"],val["ECH10"],val["ECH11"],val["ECH12"],val["ECH13"],val["ECH14"],val["ECH15"],val["ECH16"],val["ECH17"],val["ECH18"],val["ECH19"],val["ECH20"]);
+         OnlineCreditHours(Locationid,ECH1,ECH2,ECH3,ECH4,ECH5,ECH6,ECH7,ECH8,ECH9,ECH10,ECH11,ECH12,ECH13,ECH14,ECH15,ECH16,ECH17,ECH18,ECH19,ECH20);
 
 
        }
@@ -300,7 +321,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
         showButton(Totalid);
         scrollWin();
         whatWUE(ResidencyStatid);
-        OnlineCreditHours(Locationid,val["ECH1"],val["ECH2"],val["ECH3"],val["ECH4"],val["ECH5"],val["ECH6"],val["ECH7"],val["ECH8"],val["ECH9"],val["ECH10"],val["ECH11"],val["ECH12"],val["ECH13"],val["ECH14"],val["ECH15"],val["ECH16"],val["ECH17"],val["ECH18"],val["ECH19"],val["ECH20"]);
+        OnlineCreditHours(Locationid,ECH1,ECH2,ECH3,ECH4,ECH5,ECH6,ECH7,ECH8,ECH9,ECH10,ECH11,ECH12,ECH13,ECH14,ECH15,ECH16,ECH17,ECH18,ECH19,ECH20);
         
          if (Locationid == "ONLINE") {
           document.getElementById("headingTextHours").style.display='none';
@@ -391,41 +412,41 @@ function whatWUE(checkWUE){
   }
 }
 
-function OnlineCreditHours(Locationid,val["ECH1"],val["ECH2"],val["ECH3"],val["ECH4"],val["ECH5"],val["ECH6"],val["ECH7"],val["ECH8"],val["ECH9"],val["ECH10"],val["ECH11"],val["ECH12"],val["ECH13"],val["ECH14"],val["ECH15"],val["ECH16"],val["ECH17"],val["ECH18"],val["ECH19"],val["ECH20"]){
+function OnlineCreditHours(Locationid,ECH1,ECH2,ECH3,ECH4,ECH5,ECH6,ECH7,ECH8,ECH9,ECH10,ECH11,ECH12,ECH13,ECH14,ECH15,ECH16,ECH17,ECH18,ECH19,ECH20){
   if (Locationid == "ONLINE" && Yearid == "1920") {
     var CreditHours = '<h2>Tuition &amp; Fees<span id="headingTextHours">(for 12+ hours)</span></h2>'+
 '<table><tr><th></th><th colspan="2">Fall</th> <th colspan="2">Spring</th></tr><tr><th>Hours</th><th>Fee</th><th>Tuition</th><th>Fee</th><th>Tuition</th></tr><tr><td>1</td><td>' +
-val["ECH1"] +
+ECH1 +
 '</td><td>'+
-val["ECH6"] +
+ECH6 +
 '</td><td>' +
-val["ECH11"] +
+ECH11 +
 '</td><td>' +
-val["ECH16"] +
+ECH16 +
 '</td></tr><tr><td>3</td><td>' +
-val["ECH2"] +
+ECH2 +
 '</td><td>' +
-val["ECH7"] +
+ECH7 +
 '</td><td>' +
-val["ECH12"] +
+ECH12 +
 '</td><td>' +
-val["ECH17"] +
+ECH17 +
 '</td></tr><tr><td>6</td><td>'
-val["ECH3"] +
+ECH3 +
 '</td><td>' +
-val["ECH8"] +
+ECH8 +
 '</td><td>' +
-val["ECH13"] +
+ECH13 +
 '</td><td>' +
-val["ECH18"] +
+ECH18 +
 '</td></tr><tr><td>9</td><td>'
-val["ECH4"] +
+ECH4 +
 '</td><td>'
-val["ECH9"] +
+ECH9 +
 '</td><td>' +
-val["ECH14"] +
+ECH14 +
 '</td><td>' +
-val["ECH19"] +
+ECH19 +
 '</td></tr><tr><td>12</td><td>'+
 val["Tuition-F"] +
 '</td><td>' +
@@ -435,13 +456,13 @@ val["Tuition-S"]
 '</td><td>' +
 val["Fee Total-S"] +
 '</td></tr><tr><td>15</td><td>' +
-val["ECH5"] +
+ECH5 +
 '</td><td>' +
-val["ECH10"] +
+ECH10 +
 '</td><td>' +
-val["ECH15"] +
+ECH15 +
 '</td><td>' +
-val["ECH20"] +
+ECH20 +
 '</td></tr></table>' +
 '<br>' +
 "<p><a title='Program Fees' href='https://stage.wp.nau.edu/pubops-testing-sandbox/program-fees/'>View the Program Fees</a></p>";
