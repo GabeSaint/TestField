@@ -164,6 +164,11 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
       var ECH18 = val["ECH18"];
       var ECH19 = val["ECH19"];
       var ECH20 = val["ECH20"];
+      var TuitionFval = val["Tuition-F"];
+      var FeeFVal = val["Fee Total-F"];
+      var TuitionSval = val["Tuition-S"];
+      var FeeSVal =val["Fee Total-S"];
+
       
       if (Yearid == "S19") {
         if (Totalid == val["TuitionIdentifier"]) {
@@ -173,7 +178,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
             $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
             scrollWin();
             whatWUE(ResidencyStatid);
-            OnlineCreditHours(Locationid,ECH1,ECH2,ECH3,ECH4,ECH5,ECH6,ECH7,ECH8,ECH9,ECH10,ECH11,ECH12,ECH13,ECH14,ECH15,ECH16,ECH17,ECH18,ECH19,ECH20);
+            OnlineCreditHours(Locationid, Yearid, TuitionFval,FeeFVal, TuitionSval,FeeSVal, ECH1,ECH2,ECH3,ECH4,ECH5,ECH6,ECH7,ECH8,ECH9,ECH10,ECH11,ECH12,ECH13,ECH14,ECH15,ECH16,ECH17,ECH18,ECH19,ECH20);
           } else {
 
 
@@ -208,7 +213,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
          showButton(Totalid);
          scrollWin();
          whatWUE(ResidencyStatid);
-         OnlineCreditHours(Locationid,ECH1,ECH2,ECH3,ECH4,ECH5,ECH6,ECH7,ECH8,ECH9,ECH10,ECH11,ECH12,ECH13,ECH14,ECH15,ECH16,ECH17,ECH18,ECH19,ECH20);
+         OnlineCreditHours(Locationid, Yearid, TuitionFval,FeeFVal, TuitionSval,FeeSVal, ECH1,ECH2,ECH3,ECH4,ECH5,ECH6,ECH7,ECH8,ECH9,ECH10,ECH11,ECH12,ECH13,ECH14,ECH15,ECH16,ECH17,ECH18,ECH19,ECH20);
 
        }
 
@@ -226,7 +231,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
            $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
            scrollWin();
            whatWUE(ResidencyStatid);
-           OnlineCreditHours(Locationid,ECH1,ECH2,ECH3,ECH4,ECH5,ECH6,ECH7,ECH8,ECH9,ECH10,ECH11,ECH12,ECH13,ECH14,ECH15,ECH16,ECH17,ECH18,ECH19,ECH20);
+           OnlineCreditHours(Locationid, Yearid, TuitionFval,FeeFVal, TuitionSval,FeeSVal, ECH1,ECH2,ECH3,ECH4,ECH5,ECH6,ECH7,ECH8,ECH9,ECH10,ECH11,ECH12,ECH13,ECH14,ECH15,ECH16,ECH17,ECH18,ECH19,ECH20);
 
          } else {
 
@@ -258,7 +263,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
          showButton(Totalid);
          scrollWin();
          whatWUE(ResidencyStatid);
-         OnlineCreditHours(Locationid,ECH1,ECH2,ECH3,ECH4,ECH5,ECH6,ECH7,ECH8,ECH9,ECH10,ECH11,ECH12,ECH13,ECH14,ECH15,ECH16,ECH17,ECH18,ECH19,ECH20);
+         OnlineCreditHours(Locationid, Yearid, TuitionFval,FeeFVal, TuitionSval,FeeSVal, ECH1,ECH2,ECH3,ECH4,ECH5,ECH6,ECH7,ECH8,ECH9,ECH10,ECH11,ECH12,ECH13,ECH14,ECH15,ECH16,ECH17,ECH18,ECH19,ECH20);
 
 
        }
@@ -321,7 +326,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
         showButton(Totalid);
         scrollWin();
         whatWUE(ResidencyStatid);
-        OnlineCreditHours(Locationid,ECH1,ECH2,ECH3,ECH4,ECH5,ECH6,ECH7,ECH8,ECH9,ECH10,ECH11,ECH12,ECH13,ECH14,ECH15,ECH16,ECH17,ECH18,ECH19,ECH20);
+        OnlineCreditHours(Locationid, Yearid, TuitionFval,FeeFVal, TuitionSval,FeeSVal, ECH1,ECH2,ECH3,ECH4,ECH5,ECH6,ECH7,ECH8,ECH9,ECH10,ECH11,ECH12,ECH13,ECH14,ECH15,ECH16,ECH17,ECH18,ECH19,ECH20);
         
          if (Locationid == "ONLINE") {
           document.getElementById("headingTextHours").style.display='none';
@@ -412,7 +417,7 @@ function whatWUE(checkWUE){
   }
 }
 
-function OnlineCreditHours(Locationid,ECH1,ECH2,ECH3,ECH4,ECH5,ECH6,ECH7,ECH8,ECH9,ECH10,ECH11,ECH12,ECH13,ECH14,ECH15,ECH16,ECH17,ECH18,ECH19,ECH20){
+function OnlineCreditHours(Locationid, Yearid, TuitionFval,FeeFVal, TuitionSval,FeeSVal, ECH1,ECH2,ECH3,ECH4,ECH5,ECH6,ECH7,ECH8,ECH9,ECH10,ECH11,ECH12,ECH13,ECH14,ECH15,ECH16,ECH17,ECH18,ECH19,ECH20){
   if (Locationid == "ONLINE" && Yearid == "1920") {
     var CreditHours = '<h2>Tuition &amp; Fees<span id="headingTextHours">(for 12+ hours)</span></h2>'+
 '<table><tr><th></th><th colspan="2">Fall</th> <th colspan="2">Spring</th></tr><tr><th>Hours</th><th>Fee</th><th>Tuition</th><th>Fee</th><th>Tuition</th></tr><tr><td>1</td><td>' +
