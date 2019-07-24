@@ -122,9 +122,20 @@ document.getElementById('buffer').style.display='none';
   if (Locationid == "ONLINE" ){
     document.getElementById("Honors").style.display='none';
     document.getElementById("Honors2").style.display='none';
-  var Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-ONLINE';}
+  var Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-ONLINE';
+}
   else{
     Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid;
+  }
+
+  if (Locationid == "CB") {
+    document.getElementById("Honors").style.display='none';
+    document.getElementById("Honors2").style.display='none';
+    document.getElementById("ResidencyStat").style.display='none';
+    document.getElementById("ResidencyStat2").style.display='none';
+    document.getElementById("StudentStat").style.display='none';
+    document.getElementById("StudentStat2").style.display='none';
+
   }
 }
 
@@ -146,7 +157,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
     {
 
 
-      
+
       if (Yearid == "S19") {
         if (Totalid == val["TuitionIdentifier"]) {
            if (val["Grand total"] == "EMPTY") {
@@ -155,7 +166,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
             $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
             scrollWin();
             whatWUE(ResidencyStatid);
-     var ECH1 = val["ECH1"];
+      var ECH1 = val["ECH1"];
       var ECH2 = val["ECH2"];
       var ECH3 = val["ECH3"];
       var ECH4 = val["ECH4"];
@@ -352,7 +363,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
       // Check the Degree Code
       if(Totalid == val["TuitionIdentifier"] && Honorsid === false)
       {
-               
+
 
         var tableResult = '<h2>Tuition &amp; Fees <span id="headingTextHours">(for 12+ hours)</span></h2>'+
         '<table><tbody><tr><th colspan="2" class="FTH">Fall 2019&nbsp;</td><th colspan="2" class="FTH">Spring 2020</td><th class="FTH">Annual Total</td></tr><tr><th class="FTH">Fees</td><th class="FTH">Tuition</td><th class="FTH">Fees</td><th class="FTH">Tuition</td><th class="FTH">&nbsp;</td></tr><tr><td>' +
@@ -424,7 +435,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
       var TuitionSval = val["Tuition-S"];
       var FeeSVal =val["Fee Total-S"];
         OnlineCreditHours(Locationid, Yearid, TuitionFval,FeeFVal, TuitionSval,FeeSVal, ECH1,ECH2,ECH3,ECH4,ECH5,ECH6,ECH7,ECH8,ECH9,ECH10,ECH11,ECH12,ECH13,ECH14,ECH15,ECH16,ECH17,ECH18,ECH19,ECH20);
-        
+
          if (Locationid == "ONLINE") {
           document.getElementById("headingTextHours").style.display='none';
         }
@@ -572,7 +583,7 @@ ECH20 +
     $("table").css({"border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center" });
     $("td").css({"border-spacing":"0px" , "border":"1px solid #cccccc", "text-align":"center"});
   }
-  
+
   else if (Locationid == "ONLINE" && Yearid == "S19") {
     var CreditHours = '<br>'+
 '<table><tr><th class="FTH">Hour(s)</th><th class="FTH">Tuition</th><th class="FTH">Fees</th></tr><tr><td>1</td><td>' +
@@ -606,7 +617,7 @@ ECH10 +
     $("table").css({"border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center" });
     $("td").css({"border-spacing":"0px" , "border":"1px solid #cccccc", "text-align":"center"});
   }
-  
+
     else if (Locationid == "ONLINE" && Yearid == "W19") {
     var CreditHours = '<br>'+
 '<table><tr><th class="FTH">Hour(s)</th><th class="FTH">Tuition</th><th class="FTH">Fees</th></tr><tr><td>1</td><td>' +
