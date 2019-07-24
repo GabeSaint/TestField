@@ -78,6 +78,8 @@ function showInfo()
   var Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-ONLINE';
   document.getElementById("ResidencyStat").style.display='none';
   document.getElementById("ResidencyStat2").style.display='none';
+  document.getElementById("Honors").style.display='none';
+  document.getElementById("Honors2").style.display='none';
   document.getElementById('buffer').innerHTML = "<br> <br> <br>";
   } else{ var Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid;
   document.getElementById("ResidencyStat").style.display='inline';
@@ -144,6 +146,8 @@ document.getElementById('buffer').style.display='none';
     document.getElementById("StudentStat2").style.display='inline';
     if (Locationid == "ONLINE" ){
     var Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-ONLINE';
+    document.getElementById("Honors").style.display='none';
+    document.getElementById("Honors2").style.display='none';
     document.getElementById("ResidencyStat").style.display='none';
     document.getElementById("ResidencyStat2").style.display='none';
     document.getElementById('buffer').innerHTML = "<br> <br> <br>";
