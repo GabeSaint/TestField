@@ -136,12 +136,12 @@ document.getElementById('buffer').style.display='none';
     document.getElementById("StudentStat").style.display='none';
     document.getElementById("StudentStat2").style.display='none';
   }else {
-    document.getElementById("Honors").style.display='block';
-    document.getElementById("Honors2").style.display='block';
-    document.getElementById("ResidencyStat").style.display='block';
-    document.getElementById("ResidencyStat2").style.display='block';
-    document.getElementById("StudentStat").style.display='block';
-    document.getElementById("StudentStat2").style.display='block';
+    document.getElementById("Honors").style.display='inline';
+    document.getElementById("Honors2").style.display='inline';
+    document.getElementById("ResidencyStat").style.display='inline';
+    document.getElementById("ResidencyStat2").style.display='inline';
+    document.getElementById("StudentStat").style.display='inline';
+    document.getElementById("StudentStat2").style.display='inline';
   }
 }
 
