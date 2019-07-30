@@ -176,6 +176,12 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
     {
 
 
+      if (Totalid == "1920-CB"){
+
+        var tableResult = "<p>We triggered the table</p>"
+        $('#result1').append(tableResult);
+
+      }
 
       if (Yearid == "S19") {
         if (Totalid == val["TuitionIdentifier"]) {
