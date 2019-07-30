@@ -385,7 +385,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
 
           if(Totalid == "1920-CB"){
 
-            var tableResult = "<table> <tr> <th colspan='2'>Six-month Subscription</th> </tr> <tr> <th>All Programs (except Nursing)</th> <td>$3,000</td> </tr> <tr> <th>Nursing Programs</th> <td>$3,750</td> </tr> </table>"
+            var tableResult = "<table> <tr> <th colspan='2'>Six-month Subscription</th> </tr> <tr> <td>All Programs (except Nursing)</td> <td>$3,000</td> </tr> <tr> <td>Nursing Programs</td> <td>$3,750</td> </tr> </table>"
             $('#result1').append(tableResult);
             $(".FTH").css({"background-color":"#FFD200", "font-size":"16px", "border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center", "font-weight":"bold" });
             $("table").css({"border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center" });
