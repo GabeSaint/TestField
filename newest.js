@@ -177,14 +177,6 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
     $.each(data, function(key, val)
     {
 
-
-      if (Totalid == "1920-CB"){
-
-        var tableResult = "<p>We triggered the table</p>"
-        $('#result1').append(tableResult);
-
-      }
-
       if (Yearid == "S19") {
         if (Totalid == val["TuitionIdentifier"]) {
            if (val["Grand total"] == "EMPTY") {
@@ -425,7 +417,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
         val["Fee Total-F"] +
         '</td></tr></table>'+
         '<br>' +
-        "<p><a title='Program Fees' href='https://stage.wp.nau.edu/pubops-testing-sandbox/program-fees/'>View the Program Fees</a></p>";
+        "<p>A<a title='Program Fees' href='https://stage.wp.nau.edu/pubops-testing-sandbox/program-fees/'>View the Program Fees</a></p>";
 
 
         $('#result1').append(tableResult);
