@@ -385,8 +385,12 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
 
           if(Totalid == "1920-CB"){
 
-            var tableResult = "<p>Test</p>"
+            var tableResult = "<table> <tr> <th>Six-month Subscription</th> </tr> <tr> <th>All Programs (except Nursing)</th> <td>$3,000</td> </tr> <tr> <th>Nursing Programs</th> <td>$3,750</td> </tr> </table>"
             $('#result1').append(tableResult);
+            $(".FTH").css({"background-color":"#FFD200", "font-size":"16px", "border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center", "font-weight":"bold" });
+            $("table").css({"border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center" });
+            $("td").css({"border-spacing":"0px" , "border":"1px solid #cccccc", "text-align":"center"});
+            scrollWin();
           }
 
           else {
@@ -544,7 +548,7 @@ if (x.style.display === "block") {
 }
 
 function scrollWin() {
-window.scrollTo(0, 300);
+window.scrollTo(0, 500);
 }
 
 function whatWUE(checkWUE){
