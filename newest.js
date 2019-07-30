@@ -383,6 +383,15 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
       if(Totalid == val["TuitionIdentifier"] && Honorsid === false)
       {
 
+          if(Totalid == "1920-CB"){
+
+            var tableResult = "<p>Test</p>"
+            $('#result1').append(tableResult);
+          }
+
+          else {
+
+
 
         var tableResult = '<h2>Tuition &amp; Fees <span id="headingTextHours">(for 12+ hours)</span></h2>'+
         '<table><tbody><tr><th colspan="2" class="FTH">Fall 2019&nbsp;</td><th colspan="2" class="FTH">Spring 2020</td><th class="FTH">Annual Total</td></tr><tr><th class="FTH">Fees</td><th class="FTH">Tuition</td><th class="FTH">Fees</td><th class="FTH">Tuition</td><th class="FTH">&nbsp;</td></tr><tr><td>' +
@@ -417,7 +426,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
         val["Fee Total-F"] +
         '</td></tr></table>'+
         '<br>' +
-        "<p>A<a title='Program Fees' href='https://stage.wp.nau.edu/pubops-testing-sandbox/program-fees/'>View the Program Fees</a></p>";
+        "<p><a title='Program Fees' href='https://stage.wp.nau.edu/pubops-testing-sandbox/program-fees/'>View the Program Fees</a></p>";
 
 
         $('#result1').append(tableResult);
@@ -458,6 +467,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
          if (Locationid == "ONLINE") {
           document.getElementById("headingTextHours").style.display='none';
         }
+      }
 
 
       }
