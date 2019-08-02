@@ -97,7 +97,18 @@ function showInfo()
   Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid;
 }
 
+// If Location is Statewide hide WUE option
 if (Locationid == "SWC"){
+
+  document.getElementById('WUE').style.display='none';
+  Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid;
+}else {
+  document.getElementById('WUE').style.display='inline';
+  Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid;
+}
+
+// If Location is Statewide hide WUE option
+if (StudentStatid == "GRAD"){
 
   document.getElementById('WUE').style.display='none';
   Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid;
