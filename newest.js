@@ -117,6 +117,15 @@ if (StudentStatid == "GRAD"){
   Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid;
 }
 
+if (Yearid !== "1920"){
+
+  document.getElementById('CB').style.display='none';
+  Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid;
+}else {
+  document.getElementById('CB').style.display='inline';
+  Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid;
+}
+
 //here I was
 if (Yearid == "S19" || Yearid == "W19"){
 document.getElementById("Honors").style.display='none';
