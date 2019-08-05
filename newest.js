@@ -89,6 +89,7 @@ function showInfo()
   if ( Locationid == "ONLINE" || Locationid == "SWC" || Locationid == "YUMA" ){
   document.getElementById("Honors").style.display='none';
   document.getElementById("Honors2").style.display='none';
+  document.getElementById("honorsLabel").style.display='none';
   Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid;
 
 } else {
