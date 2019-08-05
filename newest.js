@@ -80,6 +80,7 @@ function showInfo()
   document.getElementById("ResidencyStat2").style.display='none';
   document.getElementById("Honors").style.display='none';
   document.getElementById("Honors2").style.display='none';
+  document.getElementById("honorsLabel").style.display='none';
   document.getElementById('buffer').innerHTML = "<br> <br> <br>";
   } else{ var Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid;
   document.getElementById("ResidencyStat").style.display='inline';
@@ -95,6 +96,7 @@ function showInfo()
 } else {
   document.getElementById("Honors").style.display='inline';
   document.getElementById("Honors2").style.display='inline';
+  document.getElementById("honorsLabel").style.display='inline';
   Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid;
 }
 
@@ -131,6 +133,7 @@ if (Yearid !== "1920"){
 if (Yearid == "S19" || Yearid == "W19"){
 document.getElementById("Honors").style.display='none';
 document.getElementById("Honors2").style.display='none';
+document.getElementById("honorsLabel").style.display='none';
 document.getElementById("ResidencyStat").style.display='none';
 document.getElementById("ResidencyStat2").style.display='none';
 document.getElementById('buffer').innerHTML = "<br> <br> <br>";
@@ -138,6 +141,7 @@ Totalid = Yearid + '-' + StudentStatid + '-' + Locationid;
 } else {
 document.getElementById("Honors").style.display='inline';
 document.getElementById("Honors2").style.display='inline';
+document.getElementById("honorsLabel").style.display='inline';
 //document.getElementById("ResidencyStat").style.display='inline';
 //document.getElementById("ResidencyStat2").style.display='inline';
 document.getElementById('buffer').style.display='none';
@@ -145,6 +149,7 @@ document.getElementById('buffer').style.display='none';
   if (Locationid == "ONLINE" ){
     document.getElementById("Honors").style.display='none';
     document.getElementById("Honors2").style.display='none';
+    document.getElementById("honorsLabel").style.display='none';
   var Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-ONLINE';
 }
   else{
@@ -154,6 +159,7 @@ document.getElementById('buffer').style.display='none';
   if (Locationid == "CB") {
     document.getElementById("Honors").style.display='none';
     document.getElementById("Honors2").style.display='none';
+    document.getElementById("honorsLabel").style.display='none';
     document.getElementById("ResidencyStat").style.display='none';
     document.getElementById("ResidencyStat2").style.display='none';
     document.getElementById("StudentStat").style.display='none';
@@ -162,6 +168,7 @@ document.getElementById('buffer').style.display='none';
   }else {
     document.getElementById("Honors").style.display='inline';
     document.getElementById("Honors2").style.display='inline';
+    document.getElementById("honorsLabel").style.display='inline';
     document.getElementById("ResidencyStat").style.display='inline';
     document.getElementById("ResidencyStat2").style.display='inline';
     document.getElementById("StudentStat").style.display='inline';
@@ -171,6 +178,7 @@ document.getElementById('buffer').style.display='none';
     var Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-ONLINE';
     document.getElementById("Honors").style.display='none';
     document.getElementById("Honors2").style.display='none';
+    document.getElementById("honorsLabel").style.display='none';
     document.getElementById("ResidencyStat").style.display='none';
     document.getElementById("ResidencyStat2").style.display='none';
     document.getElementById('buffer').innerHTML = "<br> <br> <br>";
