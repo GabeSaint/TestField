@@ -1,11 +1,14 @@
+// This function is here to hide the Fees Button upon page load
 window.onload=function(){
   document.getElementById("buttonFee").style.display='none';
 }
-
+// We are looking at a json file and using its content to populate our Dropdowns
 $.ajax({
-url: 'https://raw.githubusercontent.com/GabeSaint/TestField/master/tuitionsample.json',
+url: 'https://raw.githubusercontent.com/GabeSaint/TestField/master/tuitionsample.json', // JSON is hosted on my personal Git account
 dataType: 'json',
 
+// Upon successful call it will take the content of the JSON and populate the spreadsheets.
+// If the JSON field is empty it will skip adding that item
 success: function(data) {
   $.each(data, function(key, val) {
     var option1 = $('<option id="' + val.YearVal + '">' + val.Year + '</option>');
@@ -34,10 +37,9 @@ success: function(data) {
     } else {
     $('#ResidencyStat').append(option4);
   }
-    /*var option5 = $('<option id="' + val.AcademicVal + '">' + val.Academic + '</option>');
-    $('#Academic').append(option5);*/
   })
 },
+// If the function fails to load the JSON it should note in the dropdowns that no options are available
 error: function() {
   //if there is an error append a 'none avaliable' option
   $('#Year').append('<option id="-1">NONE AVAILABLE</option>');
@@ -48,11 +50,14 @@ error: function() {
 }
 })
 
+// This function is triggered everytime a dropdown selection is made that matches the TuitionIdentifier
 function showButton(verifyVal)
 {
   document.getElementById("buttonFee").style.display='block';
 }
 
+// This function is triggered evertime a dropdown selection is made
+// This is where most of the visual conditions live
 
 function showInfo()
 {
@@ -69,11 +74,11 @@ function showInfo()
   var StudentStatid = $('#StudentStat').find('option:selected').attr('id');
   var Locationid = $('#Location').find('option:selected').attr('id');
   var ResidencyStatid = $('#ResidencyStat').find('option:selected').attr('id');
-  /*var Academicid = $('#Academic').find('option:selected').attr('id');*/
   var Honorsid= $('input[type=checkbox]').prop('checked');
 
-  // Create the ID
+  // Create the ID with corresponding logic
 
+  // If Online hide location and Honors
   if (Locationid == "ONLINE" ){
   var Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-ONLINE';
   document.getElementById("ResidencyStat").style.display='none';
@@ -87,6 +92,7 @@ function showInfo()
   document.getElementById("ResidencyStat2").style.display='inline';
   document.getElementById('buffer').style.display='none'; }
 
+// If Online or SW or Yuma Hide Honors section
   if ( Locationid == "ONLINE" || Locationid == "SWC" || Locationid == "YUMA" ){
   document.getElementById("Honors").style.display='none';
   document.getElementById("Honors2").style.display='none';
@@ -110,7 +116,7 @@ if (Locationid == "SWC"){
   Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid;
 }
 
-// If Location is Statewide hide WUE option
+// If StudentStat is Grad hide WUE option
 if (StudentStatid == "GRAD"){
 
   document.getElementById('WUE').style.display='none';
@@ -120,6 +126,7 @@ if (StudentStatid == "GRAD"){
   Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid;
 }
 
+// If NOT a Fall/Spring selected don't show CB option
 if (Yearid !== "1920"){
 
   document.getElementById('CB').style.display='none';
@@ -129,7 +136,7 @@ if (Yearid !== "1920"){
   Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid;
 }
 
-//here I was
+// Hide Honors and Residency when selecting summer or winter
 if (Yearid == "S19" || Yearid == "W19"){
 document.getElementById("Honors").style.display='none';
 document.getElementById("Honors2").style.display='none';
@@ -142,10 +149,8 @@ Totalid = Yearid + '-' + StudentStatid + '-' + Locationid;
 document.getElementById("Honors").style.display='inline';
 document.getElementById("Honors2").style.display='inline';
 document.getElementById("honorsLabel").style.display='inline';
-//document.getElementById("ResidencyStat").style.display='inline';
-//document.getElementById("ResidencyStat2").style.display='inline';
 document.getElementById('buffer').style.display='none';
-
+// To Catch Online summer and winter courses logic
   if (Locationid == "ONLINE" ){
     document.getElementById("Honors").style.display='none';
     document.getElementById("Honors2").style.display='none';
@@ -305,7 +310,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
 
 
       }
-
+          // Show the table for Winter
       else if ( Yearid == "W19") {
         if (Totalid == val["TuitionIdentifier"]) {
 
@@ -315,7 +320,8 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
            $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
            scrollWin();
            whatWUE(ResidencyStatid);
-                  var ECH1 = val["ECH1"];
+           // These values are fed into the function for the extra credit hours to appear
+      var ECH1 = val["ECH1"];
       var ECH2 = val["ECH2"];
       var ECH3 = val["ECH3"];
       var ECH4 = val["ECH4"];
