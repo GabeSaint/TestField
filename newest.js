@@ -267,7 +267,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
     '</td><td>'+
       val["Fee Total-F"]+
     '</td></tr></table>'+
-    "<p><a title='Program Fees' href='https://stage.wp.nau.edu/pubops-testing-sandbox/program-fees/'>View the Program Fees</a></p>";
+    "<a title='Fee Breakdown' href='https://in.nau.edu/sdas/additional-fee-descriptions/' target='blank'>View how your fees are being used.</a>";
 
          $('#result1').append(tableResult);
          $('#result2').append(tableResultFees);
@@ -366,7 +366,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
     '</td><td>'+
       val["Fee Total-F"]+
     '</td></tr></table>'+
-    "<p><a title='Program Fees' href='https://stage.wp.nau.edu/pubops-testing-sandbox/program-fees/' target='_blank'>View the Program Fees</a></p>";
+    "<a title='Fee Breakdown' href='https://in.nau.edu/sdas/additional-fee-descriptions/' target='blank'>View how your fees are being used.</a>";
 
          $('#result1').append(tableResult);
          $('#result2').append(tableResultFees);
@@ -465,7 +465,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
         val["Fee Total-F"] +
         '</td></tr></table>'+
         '<br>' +
-        "<p><a title='Program Fees' href='https://stage.wp.nau.edu/pubops-testing-sandbox/program-fees/' target='_blank'>View the Program Fees</a></p>";
+        "<a title='Fee Breakdown' href='https://in.nau.edu/sdas/additional-fee-descriptions/' target='blank'>View how your fees are being used.</a>";
 
 
         $('#result1').append(tableResult);
@@ -552,7 +552,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
         val["Fee Total-F"] +
         '</td></tr></table>' +
         '<br>' +
-        "<p><a title='Program Fees' href='https://stage.wp.nau.edu/pubops-testing-sandbox/program-fees/' target='_blank'>View the Program Fees</a></p>";
+        "<a title='Fee Breakdown' href='https://in.nau.edu/sdas/additional-fee-descriptions/' target='blank'>View how your fees are being used.</a>";
 
         $('#result1').append(tableResult);
         $('#result2').append(tableResultFees);
