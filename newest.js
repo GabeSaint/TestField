@@ -432,7 +432,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
 
 
 
-        var tableResult = '<h2>Tuition &amp; Fees <span id="headingTextHours">(for 12+ hours)</span></h2>'+
+        var tableResult = '<h2>Tuition &amp; Fees <span id="headingTextHours">Your estimated full-time tuition & fees (for 12+ hours)</span></h2>'+
         '<table><tbody><tr><th colspan="2" class="FTH">Fall 2019&nbsp;</td><th colspan="2" class="FTH">Spring 2020</td><th class="FTH">Annual Total</td></tr><tr><th class="FTH">Fees</td><th class="FTH">Tuition</td><th class="FTH">Fees</td><th class="FTH">Tuition</td><th class="FTH">&nbsp;</td></tr><tr><td>' +
         val["Fee Total-F"] +
         '</td><td>' +
@@ -518,7 +518,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
         var totalHonorsYear = parseInt(HTY) + 700;
         totalHonorsYear = (totalHonorsYear).toFixed(0).replace(/\d(?=(\d{3})+\.)/g, '$&,');
         }
-        var tableResult = '<h2>Tuition &amp; Fees <span id="headingTextHours">(for 12+ hours)</span></h2>'+
+        var tableResult = '<h2>Tuition &amp; Fees <span id="headingTextHours">Your estimated full-time tuition & fees (for 12+ hours)</span></h2>'+
         '<table><tbody><tr><th colspan="3" class="FTH">Fall 2019&nbsp;</td><th colspan="3" class="FTH">Spring 2020</td><th class="FTH">Annual Total</td></tr><tr><th class="FTH">Fee</td><th class="FTH">Honors Fees</td><th class="FTH">Tuition</td><th class="FTH">Fees</td><th class="FTH">Honors Fees</td><th class="FTH">Tuition</td><th class="FTH">&nbsp;</td></tr><tr><td>' +
         val["Fee Total-F"] +
         '</td><td>$350</td><td>' +
