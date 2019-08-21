@@ -431,8 +431,10 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
           else {
 
 
-        var subTotalsF = val["Tuition-F"] + val["Fee Total-F"];
-        var subTotalsS = val["Tuition-S"] + val["Fee Total-S"];
+        var subTotalsF = val["Tuition-F"];
+            subTotalsF += subval["Fee Total-F"];
+        var subTotalsS = val["Tuition-S"];
+            subTotalsS += val["Fee Total-S"];
         var tableResult = '<h3>Your estimated full-time tuition & fees <span id="headingTextHours">(for 12+ hours)</span></h3>'+
         '<table><tr><th class="emptyHeaderCell"></th><th class="FTH">Tuition</th><th class="FTH">Fees</th><th class="FTH">Totals</th></tr><tr><td class="emptyCell">Fall 2019</td><td>' +
     val["Tuition-F"] +
