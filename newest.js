@@ -366,7 +366,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
     '</td><td>'+
       val["Fee Total-F"]+
     '</td></tr></table>'+
-    "<p><a title='Program Fees' href='https://stage.wp.nau.edu/pubops-testing-sandbox/program-fees/'>View the Program Fees</a></p>";
+    "<p><a title='Program Fees' href='https://stage.wp.nau.edu/pubops-testing-sandbox/program-fees/' target='_blank'>View the Program Fees</a></p>";
 
          $('#result1').append(tableResult);
          $('#result2').append(tableResultFees);
@@ -465,7 +465,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
         val["Fee Total-F"] +
         '</td></tr></table>'+
         '<br>' +
-        "<p><a title='Program Fees' href='https://stage.wp.nau.edu/pubops-testing-sandbox/program-fees/'>View the Program Fees</a></p>";
+        "<p><a title='Program Fees' href='https://stage.wp.nau.edu/pubops-testing-sandbox/program-fees/' target='_blank'>View the Program Fees</a></p>";
 
 
         $('#result1').append(tableResult);
@@ -473,7 +473,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
         $(".FTH").css({"background-color":"#FFD200", "font-size":"16px", "border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center", "font-weight":"bold" });
         $("table").css({"border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center" });
         $("td").css({"border-spacing":"0px" , "border":"1px solid #cccccc", "text-align":"center"});
-        $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
+        $("button#buttonFee").css({"background-color":"#e86e25" , "color":"black"});
         showButton(Totalid);
         scrollWin();
         whatWUE(ResidencyStatid);
@@ -552,7 +552,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
         val["Fee Total-F"] +
         '</td></tr></table>' +
         '<br>' +
-        "<p><a title='Program Fees' href='https://stage.wp.nau.edu/pubops-testing-sandbox/program-fees/'>View the Program Fees</a></p>";
+        "<p><a title='Program Fees' href='https://stage.wp.nau.edu/pubops-testing-sandbox/program-fees/' target='_blank'>View the Program Fees</a></p>";
 
         $('#result1').append(tableResult);
         $('#result2').append(tableResultFees);
