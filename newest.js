@@ -539,7 +539,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
       '</td><td>$350' +
       '</td><td>&dollar;' +
       subTotalsS +
-      '</td></tr><tr><td class="emptyCell"></td><td class="emptyCell"></td><td class="emptyCell">Total</td><td>' +
+      '</td></tr><tr><td class="emptyCell"></td><td class="emptyCell"></td><td class="emptyCell"></td><td class="emptyCell">Total</td><td>' +
       val["Grand total"] +
       '</td></tr></table>';
 
