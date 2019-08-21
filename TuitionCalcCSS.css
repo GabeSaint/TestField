@@ -22,3 +22,9 @@ line-height: 130% !important;
 font-size: 18px !important;
 
 }
+
+table {
+
+  border-collapse: separate;
+
+}
