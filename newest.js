@@ -431,10 +431,10 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
           else {
 
 
-        var subTotalsF = val["Tuition-F"];
-            subTotalsF += val["Fee Total-F"];
-        var subTotalsS = val["Tuition-S"];
-            subTotalsS += val["Fee Total-S"];
+        var subTotalsF = sortedValtoInt(val["Tuition-F"]);
+            subTotalsF += sortedValtoInt(val["Fee Total-F"]);
+        var subTotalsS = sortedValtoInt(val["Tuition-S"]);
+            subTotalsS += sortedValtoInt(val["Fee Total-S"]);
         var tableResult = '<h3>Your estimated full-time tuition & fees <span id="headingTextHours">(for 12+ hours)</span></h3>'+
         '<table><tr><th class="emptyHeaderCell"></th><th class="FTH">Tuition</th><th class="FTH">Fees</th><th class="FTH">Totals</th></tr><tr><td class="emptyCell">Fall 2019</td><td>' +
     val["Tuition-F"] +
@@ -716,4 +716,12 @@ ECH8 +
     $("table").css({"border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center" });
     $("td").css({"border-spacing":"0px" , "border":"1px solid #cccccc", "text-align":"center"});
   }
+}
+
+function sortedValtoInt(DataVal) {
+
+  var intVal = Number(DataVal.replace(/[^0-9\.]+/g,""));
+  var intOutputVal = parseInt(intVal);
+  return intOutputVal;
+
 }
