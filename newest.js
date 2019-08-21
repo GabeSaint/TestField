@@ -433,17 +433,21 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
 
 
         var tableResult = '<h3>Your estimated full-time tuition & fees <span id="headingTextHours">(for 12+ hours)</span></h3>'+
-        '<table><tbody><tr><th colspan="2" class="FTH">Fall 2019&nbsp;</td><th colspan="2" class="FTH">Spring 2020</td><th class="FTH">Annual Total</td></tr><tr><th class="FTH">Fees</td><th class="FTH">Tuition</td><th class="FTH">Fees</td><th class="FTH">Tuition</td><th class="FTH">&nbsp;</td></tr><tr><td>' +
-        val["Fee Total-F"] +
-        '</td><td>' +
-        val["Tuition-F"] +
-        '</td><td>' +
-        val["Fee Total-S"] +
-        '</td><td>' +
-        val["Tuition-S"] +
-        '</td><td>' +
-        val["Grand total"] +
-        '</td></tr></tbody></table>';
+        '<table><tr><th class="emptyHeaderCell"></th><th class="FTH">Tuition</th><th class="FTH">Fees</th><th class="FTH">Totals</th></tr><tr><td class="emptyCell">Fall 2019</td><td>' +
+    val["Tuition-F"] +
+    '</td><td>' +
+    val["Fee Total-F"] +
+    '</td><td>' +
+    val["Tuition-F"] + val["Fee Total-F"] +
+    '</td></tr><tr><td class="emptyCell">Spring 2019</td><td>' +
+    val["Tuition-S"] +
+    '</td><td>' +
+    val["Fee Total-S"] +
+    '</td><td>' +
+    val["Tuition-S"] + val["Fee Total-S"] +
+    '</td></tr><tr><td class="emptyCell"></td><td class="emptyCell"></td><td class="emptyCell">Total</td><td>' +
+    val["Grand total"] +
+    '</td></tr></table>';
 
         // Leave the tableResultFees alone they are good.
 
