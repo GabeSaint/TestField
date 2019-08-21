@@ -523,6 +523,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
               subTotalsF += sortedValtoInt(val["Fee Total-F"]) + 350;
           var subTotalsS = sortedValtoInt(val["Tuition-S"]);
               subTotalsS += sortedValtoInt(val["Fee Total-S"]) + 350;
+            }
           var tableResult = '<h3>Your estimated full-time tuition & fees <span id="headingTextHours">(for 12+ hours)</span></h3>'+
           '<table><tr><th class="emptyHeaderCell"></th><th class="FTH">Tuition</th><th class="FTH">Fees</th><th class="FTH">Honors Fee</th><th class="FTH">Totals</th></tr><tr><td class="emptyCell">Fall 2019</td><td>' +
       val["Tuition-F"] +
