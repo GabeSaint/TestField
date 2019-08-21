@@ -216,7 +216,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
            if (val["Grand total"] == "EMPTY") {
             var tableResult = "<p>An invalid option has been chosen, please make a different selection.</p>"
             $('#result1').append(tableResult);
-            $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
+            $("button#buttonFee").css({"background-color":"#e86e25" , "color":"black"});
             scrollWin();
             whatWUE(ResidencyStatid);
       var ECH1 = val["ECH1"];
@@ -274,7 +274,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
          $(".FTH").css({"background-color":"#FFD200", "font-size":"16px", "border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center", "font-weight":"bold" });
          $("table").css({"border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center" });
          $("td").css({"border-spacing":"0px" , "border":"1px solid #cccccc", "text-align":"center"});
-         $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
+         $("button#buttonFee").css({"background-color":"#e86e25" , "color":"black"});
          showButton(Totalid);
          scrollWin();
          whatWUE(ResidencyStatid);
@@ -317,7 +317,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
           if (val["Grand total"] == "EMPTY") {
            var tableResult = "<p>An invalid option has been chosen, please make a different selection.</p>"
            $('#result1').append(tableResult);
-           $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
+           $("button#buttonFee").css({"background-color":"#e86e25" , "color":"black"});
            scrollWin();
            whatWUE(ResidencyStatid);
            // These values are fed into the function for the extra credit hours to appear
@@ -373,7 +373,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
          $(".FTH").css({"background-color":"#FFD200", "font-size":"16px", "border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center", "font-weight":"bold" });
          $("table").css({"border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center" });
          $("td").css({"border-spacing":"0px" , "border":"1px solid #cccccc", "text-align":"center"});
-         $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
+         $("button#buttonFee").css({"background-color":"#e86e25" , "color":"black"});
          showButton(Totalid);
          scrollWin();
          whatWUE(ResidencyStatid);
@@ -559,7 +559,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
         $(".FTH").css({"background-color":"#FFD200", "font-size":"16px", "border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center", "font-weight":"bold" });
         $("table").css({"border-spacing":"0px" , "border":"0px solid #cccccc", "text-align":"center" });
         $("td").css({"border-spacing":"0px" , "border":"1px solid #cccccc", "text-align":"center"});
-        $("button#buttonFee").css({"background-color":"#ffd200" , "color":"black"});
+        $("button#buttonFee").css({"background-color":"#e86e25" , "color":"black"});
         showButton(Totalid);
         scrollWin();
         whatWUE(ResidencyStatid);
