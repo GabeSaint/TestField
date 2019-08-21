@@ -1,0 +1,24 @@
+select {
+
+     font-size: 14px;
+ }
+
+.emptyCell {
+
+  border: none !important;
+  text-align: right !important;
+
+}
+
+.disclaimer {
+
+font-size: 14px !important;
+line-height: 130% !important;
+
+}
+
+.staticDetails {
+
+font-size: 18px !important;
+
+}
