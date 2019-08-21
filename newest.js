@@ -519,23 +519,30 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
 
       else if (Totalid == val["TuitionIdentifier"] && Honorsid == true) {
         if (Honorsid === true && Yearid == "1920"){
-        var stringINT = val["Grand total"];
-        var HTY = Number(stringINT.replace(/[^0-9\.]+/g,""));
-        var totalHonorsYear = parseInt(HTY) + 700;
-        totalHonorsYear = (totalHonorsYear).toFixed(0).replace(/\d(?=(\d{3})+\.)/g, '$&,');
-        }
-        var tableResult = '<h3>Your estimated full-time tuition & fees <span id="headingTextHours">(for 12+ hours)</span></h3>'+
-        '<table><tbody><tr><th colspan="3" class="FTH">Fall 2019&nbsp;</td><th colspan="3" class="FTH">Spring 2020</td><th class="FTH">Annual Total</td></tr><tr><th class="FTH">Fee</td><th class="FTH">Honors Fees</td><th class="FTH">Tuition</td><th class="FTH">Fees</td><th class="FTH">Honors Fees</td><th class="FTH">Tuition</td><th class="FTH">&nbsp;</td></tr><tr><td>' +
-        val["Fee Total-F"] +
-        '</td><td>$350</td><td>' +
-        val["Tuition-F"] +
-        '</td><td>' +
-        val["Fee Total-S"] +
-        '</td><td>$350</td><td>' +
-        val["Tuition-S"] +
-        '</td><td>' +
-        '$'+ totalHonorsYear +
-        '</td></tr></tbody></table>';
+          var subTotalsF = sortedValtoInt(val["Tuition-F"]);
+              subTotalsF += sortedValtoInt(val["Fee Total-F"]) + 350;
+          var subTotalsS = sortedValtoInt(val["Tuition-S"]);
+              subTotalsS += sortedValtoInt(val["Fee Total-S"]) + 350;
+          var tableResult = '<h3>Your estimated full-time tuition & fees <span id="headingTextHours">(for 12+ hours)</span></h3>'+
+          '<table><tr><th class="emptyHeaderCell"></th><th class="FTH">Tuition</th><th class="FTH">Fees</th><th class="FTH">Honors Fee</th><th class="FTH">Totals</th></tr><tr><td class="emptyCell">Fall 2019</td><td>' +
+      val["Tuition-F"] +
+      '</td><td>' +
+      val["Fee Total-F"] +
+      '</td><td>'+
+      '$350' +
+      '</td><td>&dollar;' +
+      subTotalsF +
+      '</td></tr><tr><td class="emptyCell">Spring 2019</td><td>' +
+      val["Tuition-S"] +
+      '</td><td>' +
+      val["Fee Total-S"] +
+      '</td><td>'+
+      '$350' +
+      '</td><td>&dollar;' +
+      subTotalsS +
+      '</td></tr><tr><td class="emptyCell"></td><td class="emptyCell"></td><td class="emptyCell">Total</td><td>' +
+      val["Grand total"] +
+      '</td></tr></table>';
 
 
         // Leave the tableResultFees alone they are good.
