@@ -25,6 +25,6 @@ font-size: 18px !important;
 
 table {
 
-  border-collapse: separate;
+  border-collapse: separate !important;
 
 }
