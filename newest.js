@@ -464,7 +464,6 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
         '</td><td>' +
         val["Fee Total-F"] +
         '</td></tr></table>'+
-        '<br>' +
         "<a title='Fee Breakdown' href='https://in.nau.edu/sdas/additional-fee-descriptions/' target='blank'>View how your fees are being used.</a>";
 
 
@@ -551,7 +550,6 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
         '</td><td>' +
         val["Fee Total-F"] +
         '</td></tr></table>' +
-        '<br>' +
         "<a title='Fee Breakdown' href='https://in.nau.edu/sdas/additional-fee-descriptions/' target='blank'>View how your fees are being used.</a>";
 
         $('#result1').append(tableResult);
