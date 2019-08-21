@@ -521,9 +521,12 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
         if (Honorsid === true && Yearid == "1920"){
           var subTotalsF = sortedValtoInt(val["Tuition-F"]);
               subTotalsF += sortedValtoInt(val["Fee Total-F"]) + 350;
+          var subTotalsFD = subTotalsF.toLocaleString();
           var subTotalsS = sortedValtoInt(val["Tuition-S"]);
               subTotalsS += sortedValtoInt(val["Fee Total-S"]) + 350;
+          var subTotalsSD = subTotalsS.toLocaleString();
           var honorsGrandtotal = subTotalsF + subTotalsS;
+            honorsGrandtotal = honorsGrandtotal.toLocaleString();
             }
           var tableResult = '<h3>Your estimated full-time tuition & fees <span id="headingTextHours">(for 12+ hours)</span></h3>'+
           '<table><tr><th class="emptyHeaderCell"></th><th class="FTH">Tuition</th><th class="FTH">Fees</th><th class="FTH">Honors Fee</th><th class="FTH">Totals</th></tr><tr><td class="emptyCell">Fall 2019</td><td>' +
@@ -532,14 +535,14 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
       val["Fee Total-F"] +
       '</td><td>$350' +
       '</td><td>&dollar;' +
-      subTotalsF +
+      subTotalsFD +
       '</td></tr><tr><td class="emptyCell">Spring 2019</td><td>' +
       val["Tuition-S"] +
       '</td><td>' +
       val["Fee Total-S"] +
       '</td><td>$350' +
       '</td><td>&dollar;' +
-      subTotalsS +
+      subTotalsSD +
       '</td></tr><tr><td class="emptyCell"></td><td class="emptyCell"></td><td class="emptyCell"></td><td class="emptyCell">Total</td><td>&dollar;' +
       honorsGrandtotal +
       '</td></tr></table>';
