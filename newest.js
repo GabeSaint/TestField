@@ -441,13 +441,13 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
     '</td><td>' +
     val["Fee Total-F"] +
     '</td><td>' +
-    subTotalsF +
+    $+subTotalsF +
     '</td></tr><tr><td class="emptyCell">Spring 2019</td><td>' +
     val["Tuition-S"] +
     '</td><td>' +
     val["Fee Total-S"] +
     '</td><td>' +
-    subTotalsS +
+    $+subTotalsS +
     '</td></tr><tr><td class="emptyCell"></td><td class="emptyCell"></td><td class="emptyCell">Total</td><td>' +
     val["Grand total"] +
     '</td></tr></table>';
