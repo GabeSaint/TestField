@@ -433,21 +433,23 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
 
         var subTotalsF = sortedValtoInt(val["Tuition-F"]);
             subTotalsF += sortedValtoInt(val["Fee Total-F"]);
+        var subTotalsFD = subTotalsF.toLocaleString();
         var subTotalsS = sortedValtoInt(val["Tuition-S"]);
             subTotalsS += sortedValtoInt(val["Fee Total-S"]);
+        var subTotalsSD = subTotalsF.toLocaleString();
         var tableResult = '<h3>Your estimated full-time tuition & fees <span id="headingTextHours">(for 12+ hours)</span></h3>'+
         '<table><tr><th class="emptyHeaderCell"></th><th class="FTH">Tuition</th><th class="FTH">Fees</th><th class="FTH">Totals</th></tr><tr><td class="emptyCell">Fall 2019</td><td>' +
     val["Tuition-F"] +
     '</td><td>' +
     val["Fee Total-F"] +
     '</td><td>&dollar;' +
-    subTotalsF +
+    subTotalsFD +
     '</td></tr><tr><td class="emptyCell">Spring 2019</td><td>' +
     val["Tuition-S"] +
     '</td><td>' +
     val["Fee Total-S"] +
     '</td><td>&dollar;' +
-    subTotalsS +
+    subTotalsSD +
     '</td></tr><tr><td class="emptyCell"></td><td class="emptyCell"></td><td class="emptyCell">Total</td><td>' +
     val["Grand total"] +
     '</td></tr></table>';
