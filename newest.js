@@ -219,6 +219,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
             $("button#buttonFee").css({"background-color":"#e86e25" , "color":"black"});
             scrollWin();
             whatWUE(ResidencyStatid);
+      // This section was used to pass parameters into function.  
       var ECH1 = val["ECH1"];
       var ECH2 = val["ECH2"];
       var ECH3 = val["ECH3"];
@@ -550,7 +551,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
       '</td></tr></table>';
 
 
-        // Leave the tableResultFees alone they are good.
+        // Fees table
 
         var tableResultFees = '<table><tr><th class="FTH">FA<br>Trust</th><th class="FTH">Health<br>&amp; Rec</th><th class="FTH">Activity</th><th class="FTH">Info<br>Tech</th><th class="FTH">Green</th><th class="FTH">ASNAU</th><th class="FTH">Athletics</th><th class="FTH">Fee<br>Total</th></tr><tr><td>' +
         val["FA Trust-F"] +
@@ -729,7 +730,7 @@ ECH8 +
     $("td").css({"border-spacing":"0px" , "border":"1px solid #cccccc", "text-align":"center"});
   }
 }
-
+// Done to calculate Vals for use in Table AJAX seems to give items back in Strings
 function sortedValtoInt(DataVal) {
 
   var intVal = Number(DataVal.replace(/[^0-9\.]+/g,""));
