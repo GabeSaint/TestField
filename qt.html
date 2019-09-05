@@ -1,29 +1,33 @@
-<div class="tuitionDrops">
-  <div class="tuitionCol">
-      <label>Academic Year: </label>
+ <h2>Degree details</h2>
+      <label>Academic Year/Term: </label>
       <select id="Year" style="width: 300px;" name="Year Select" onchange="showInfo()">
-      <option id="defaultDDval">Select your academic Year</option>
+      <option id="defaultDDval" selected>Select your academic year</option>
       </select><div id='buffer'></div>
+    <p>
+<div id="StudentStat2">
       <label>Student Status: </label>
       <select id="StudentStat" style="width: 300px;" name="Student Status Select" onchange="showInfo()">
-      <option id="defaultDDval">Select a status</option>
-      </select>
-      <label>Location: </label>
-      <select id="Location" style="width: 300px;" name="Location Select" onchange="showInfo()">
-      <option id="defaultDDval">Choose your campus</option>
+      <option id="defaultDDval" selected >Select a status</option>
       </select>
     </div>
-  <div class="tuitionCol">
+</p>
+      <label>Location: </label>
+      <select id="Location" style="width: 300px;" name="Location Select" onchange="showInfo()">
+      <option id="defaultDDval" selected >Choose your campus</option>
+      </select>
     <div id="ResidencyStat2">
       <label >Residency Status: </label>
         <select id="ResidencyStat" style="width: 300px;" name="Residency Status Select" onchange="showInfo()" >
-        <option id="defaultDDval">Select your residency status</option>
+        <option id="defaultDDval" selected >Select your residency status</option>
         </select>
       </div>
       <br>
+    <p>
+ <br>
+      <label id="honorsLabel" >Other Information: </label>
       <input id="Honors" type="checkbox" name="HonorsCheck" value="True" onchange="showInfo()"><span id="Honors2" style="font-size:16px">  I will be a new Honors student.</span><br>
-    </div>
-  </div>
+   </p>
+  
 
     <hr>
     <div id="result1"></div>
@@ -36,3 +40,16 @@
     </div>
     </div>
 <div id="errorMessage"></div>
+
+<p class="staticDetails">View your department's <a title="Program Fees" href="https://stage.wp.nau.edu/pubops-testing-sandbox/program-fees/" target="_blank">program fees</a><br /> For further information regarding tuition and fees, please contact&nbsp;<a href="https://in.nau.edu/sdas" target="_blank">Student &amp; Departmental Account Services</a>.<br /> For further information regarding financial aid or cost of attendance, please contact the&nbsp;<a href="https://nau.edu/office-of-scholarships-and-financial-aid/" target="_blank">Office of Scholarships and Financial Aid</a>.</p>
+<hr>
+<p class='disclaimer'>
+<strong>Disclaimers</strong>
+This is not a bill. This is only an estimate. All amounts shown in the tuition and fees or in other university publications or web pages represent tuition and fees as currently approved. However, Northern Arizona University reserves the right to increase or modify tuition and fees without prior notice, upon approval by the Arizona Board of Regents or as otherwise consistent with Board policy and to make such modifications applicable to students enrolled at Northern Arizona University at that time as well as to incoming students. In addition, all tuition amounts and fees are subject to change at any time for correction of errors. Finally, please note that fee amounts billed for any period may be adjusted at a future date.
+</p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://gabesaint.github.io/TestField/newest.js"></script>
+<link rel="stylesheet" href="https://gabesaint.github.io/TestField/TuitionCalcCSS.css">
+
+
