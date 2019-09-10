@@ -28,3 +28,16 @@ table {
   border-collapse: separate !important;
 
 }
+
+
+*/ Troy's Additions to add responsiveness to the tables on mobile Chrome and Safari/*
+
+th.FTH {
+    white-space: nowrap;
+    line-height: initial;
+}
+ 
+#tuitionFeesDisplay table, #result1 table {
+    overflow-x: scroll;
+    display: block;
+}
