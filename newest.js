@@ -192,20 +192,6 @@ document.getElementById('buffer').style.display='none';
     document.getElementById("ResidencyStat2").style.display='inline';
     document.getElementById('buffer').style.display='none'; }
   }
-// If Winter is chosen, online should be the only option in Location
-if(Yearid == "W19")
-{
-document.getElementById('FLAG').style.display='none';
-document.getElementById('SWC').style.display='none';
-document.getElementById('YUMA').style.display='none';
-Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid;
-} else
-{
-  document.getElementById('FLAG').style.display='inline';
-  document.getElementById('SWC').style.display='inline';
-  document.getElementById('YUMA').style.display='inline';
-Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid;
-}
 
 // Call Function - Display Table
 tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, ResidencyStatid);
