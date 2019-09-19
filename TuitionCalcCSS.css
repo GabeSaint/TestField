@@ -36,10 +36,11 @@ th.FTH {
     white-space: nowrap;
     line-height: initial;
 }
+*/
  
 #tuitionFeesDisplay table, #result1 table {
     overflow-x: scroll;
     display: block;
 }
 
-*/
+
