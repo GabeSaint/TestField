@@ -111,7 +111,7 @@ function showInfo() {
     if(Locationid == "SWC")
     {
     document.getElementById('WUE').style.display='none';
-    document.getElementById("ResidencyStat").value = 'defaultDDval';  // Testing reset dropdown value
+    document.getElementById("ResidencyStat").value = defaultDDval;  // Testing reset dropdown value
     Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid;
     } else
     {
