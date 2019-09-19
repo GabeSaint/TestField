@@ -30,7 +30,7 @@ table {
 }
 
 
-/* Troy's Additions to add responsiveness to the tables on mobile Chrome and Safari */
+/* Troy's Additions to add responsiveness to the tables on mobile Chrome and Safari 
 
 th.FTH {
     white-space: nowrap;
@@ -41,3 +41,5 @@ th.FTH {
     overflow-x: scroll;
     display: block;
 }
+
+*/
