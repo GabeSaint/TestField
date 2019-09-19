@@ -111,6 +111,7 @@ function showInfo() {
     if(Locationid == "SWC")
     {
     document.getElementById('WUE').style.display='none';
+    document.getElementById("ResidencyStat").value = 'defaultDDval';  // Testing reset dropdown value
     Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid;
     } else
     {
@@ -138,10 +139,6 @@ function showInfo() {
         document.getElementById('WUE').style.display = 'none';
         Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid;
     }
-    //else {
-        //document.getElementById('WUE').style.display = 'inline';
-      //  Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid;
-    //}
 
     // If NOT a Fall/Spring selected don't show CB option
     if (Yearid !== "1920") {
