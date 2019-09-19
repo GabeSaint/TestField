@@ -107,6 +107,17 @@ function showInfo() {
     Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid;
     }
 
+    // If SWC is chosen, WUE should not come up
+    if(Locationid == "SWC")
+    {
+    document.getElementById('WUE').style.display='none';
+    Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid;
+    } else
+    {
+      document.getElementById('WUE').style.display='inline';
+    Totalid = Yearid + '-' + StudentStatid + '-' + Locationid + '-' + ResidencyStatid;
+    }
+
     // If Online or SW or Yuma Hide Honors section
     if (Locationid == "ONLINE" || Locationid == "SWC" || Locationid == "YUMA") {
         document.getElementById("Honors").style.display = 'none';
