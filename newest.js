@@ -219,7 +219,7 @@ function tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, Resi
             $("button#buttonFee").css({"background-color":"#e86e25" , "color":"black"});
             scrollWin();
             whatWUE(ResidencyStatid);
-      // This section was used to pass parameters into function.  
+      // This section was used to pass parameters into function.
       var ECH1 = val["ECH1"];
       var ECH2 = val["ECH2"];
       var ECH3 = val["ECH3"];
