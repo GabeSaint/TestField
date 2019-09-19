@@ -192,6 +192,7 @@ document.getElementById('buffer').style.display='none';
     document.getElementById("ResidencyStat2").style.display='inline';
     document.getElementById('buffer').style.display='none'; }
   }
+}
 
 // Call Function - Display Table
 tuitionTable(Totalid, Honorsid, Yearid, StudentStatid, Locationid, ResidencyStatid);
